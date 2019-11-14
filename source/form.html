@@ -44,15 +44,18 @@
         <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h3>
         <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
           <div class="forms__wrapper">
-            <label class="forms__item">ФАМИЛИЯ:
-              <input class="forms__question" type="text" name="last-name" placeholder="Укажите фамилию *" required>
-            </label>
-            <label class="forms__item">ИМЯ:
-              <input class="forms__question" type="text" name="first-name" placeholder="Введите ваше имя *" required>
-            </label>
-            <label class="forms__item">ОТЧЕСТВО:
-              <input class="forms__question" type="text" name="patronym" placeholder="Ну и отчество тоже">
-            </label>
+            <p class="forms__group">
+              <label for="family-name">ФАМИЛИЯ:</label>
+              <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
+            </p>
+            <p class="forms__group">
+              <label for="name">ИМЯ:</label>
+              <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
+            </p>
+            <p class="forms__group">
+              <label for="user-patronym">ОТЧЕСТВО:</label>
+              <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
+            </p>
           </div>
 
           <fieldset class="forms__checkbox">
@@ -60,33 +63,32 @@
             <h3>Ваши безбашенные достижения в путешествии</h3>
             <ul class="checkbox__list check-list">
               <li class="check-list__item">
-                <label class="check-list__label">Сделал селфи с акулой
-                  <input class="check-list__input" type="checkbox" name="make selfy" checked>
-                </label>
+                <label class="check-list__label">Сделал селфи с акулой</label>
+                <input class="check-list__input" type="checkbox" name="make-selfy" checked>
               </li>
               <li class="check-list__item">
                 <label class="check-list__label">Обгорел на пляже
-                  <input class="check-list__input" type="checkbox" name="on beach" checked>
+                  <input class="check-list__input" type="checkbox" name="on-beach" checked>
                 </label>
               </li>
               <li class="check-list__item">
                 <label class="check-list__label">Видел Чака Норриса
-                  <input class="check-list__input" type="checkbox" name="Chuck Norris">
+                  <input class="check-list__input" type="checkbox" name="Chuck-Norris">
                 </label>
               </li>
               <li class="check-list__item">
                 <label class="check-list__label">Накупил сувениров
-                  <input class="check-list__input" type="checkbox" name="Buy souvenir">
+                  <input class="check-list__input" type="checkbox" name="Buy-souvenir">
                 </label>
               </li>
               <li class="check-list__item">
                 <label class="check-list__label">Удержал башню
-                  <input class="check-list__input" type="checkbox" name="Take tower" checked>
+                  <input class="check-list__input" type="checkbox" name="Take-tower" checked>
                 </label>
               </li>
               <li class="check-list__item">
                 <label class="check-list__label">Разгромил отель
-                  <input class="check-list__input" type="checkbox" name="smash hotel">
+                  <input class="check-list__input" type="checkbox" name="smash-hotel">
                 </label>
               </li>
             </ul>
