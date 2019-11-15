@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Пинк: поделись своей историей</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
 
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img src="https://via.placeholder.com" width="100" height="50" alt="logo PINK">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__togle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
+<head>
+  <meta charset="utf-8">
+  <title>Пинк: поделись своей историей</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="https://via.placeholder.com" width="100" height="50" alt="logo PINK">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__togle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
         <ul class="main-nav__site-list">
           <li class="site-list__item">
             <a href="#">ГЛАВНАЯ</a>
@@ -29,37 +31,38 @@
             <a href="#">HTML ACADEMY</a>
           </li>
         </ul>
-        </div>
-      </nav>
-    </header>
-
-    <main class="page-third">
-      <div class="page-third__wrapper">
-        <h1 class="page-third__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <img class="page-third__background" src="https://via.placeholder.com/150x150">
       </div>
+    </nav>
+  </header>
 
-      <section class="forms">
-        <h2 class="visually-hidden">Введите данные формы</h2>
-        <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h3>
-        <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
-          <div class="forms__wrapper">
-            <p class="forms__group">
-              <label for="family-name">ФАМИЛИЯ:</label>
-              <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
-            </p>
-            <p class="forms__group">
-              <label for="name">ИМЯ:</label>
-              <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
-            </p>
-            <p class="forms__group">
-              <label for="user-patronym">ОТЧЕСТВО:</label>
-              <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
-            </p>
-          </div>
+  <main class="page-third">
+    <div class="page-third__wrapper">
+      <h1 class="page-third__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <img class="page-third__background" src="https://via.placeholder.com/150x150">
+    </div>
 
-          <fieldset class="forms__checkbox">
-            <div class="checkbox__wrapper checkbox__wrapper--bgray">
+    <section class="forms">
+      <h2 class="visually-hidden">Введите данные формы</h2>
+      <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+        бонусную карту! Пожалуйста, заполните форму ниже:</h3>
+      <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
+        <div class="forms__wrapper">
+          <p class="forms__group">
+            <label for="family-name">ФАМИЛИЯ:</label>
+            <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
+          </p>
+          <p class="forms__group">
+            <label for="name">ИМЯ:</label>
+            <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
+          </p>
+          <p class="forms__group">
+            <label for="user-patronym">ОТЧЕСТВО:</label>
+            <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
+          </p>
+        </div>
+
+        <fieldset class="forms__checkbox">
+          <div class="checkbox__wrapper checkbox__wrapper--bgray">
             <h3>Ваши безбашенные достижения в путешествии</h3>
             <ul class="checkbox__list check-list">
               <li class="check-list__item">
@@ -92,53 +95,54 @@
                 </label>
               </li>
             </ul>
-            </div>
-            <div class="forms__wrapper">
-              <label class="forms__item">Номер телефона
-                <input class="forms__question" type="tel" name="phone number" pattern="[0-9]{11}" placeholder="Номер, пожалуйста">
-              </label>
-              <label class="forms__item">адрес почты
-                <input class="forms__question" type="email" name="email" placeholder="Введите почту *" required>
-              </label>
-            </div>
-          </fieldset>
-          <div class="forms__wrapper forms__wrapper--bgray">
-            <h3>С каким приложением путешествовали?</h3>
-            <ul class="forms__list checkbox-list">
-              <li class="checkbox-list__item">
-                <label class="checkbox-list__label">Pink для iOS
-                  <input class="checkbox-list__input" type="radio" name="app-group" value="iOS" checked>
-                </label>
-              </li>
-              <li class="checkbox-list__item">
-                <label class="checkbox-list__label">Pink на Android
-                  <input class="checkbox-list__input" type="radio" name="app-group" value="Android">
-                </label>
-              </li>
-              <li class="checkbox-list__item">
-                <label class="checkbox-list__label">Windows Phone
-                  <input class="checkbox-list__input" type="radio" name="app-group" value="Windows">
-                </label>
-              </li>
-            </ul>
           </div>
           <div class="forms__wrapper">
-            <h3 class="forms__title">Опишите свои эмоции</h3>
-            <label class="forms__item">
-              <textarea name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях">
-              </textarea>
+            <label class="forms__item">Номер телефона
+              <input class="forms__question" type="tel" name="phone number" pattern="[0-9]{11}"
+                placeholder="Номер, пожалуйста">
+            </label>
+            <label class="forms__item">адрес почты
+              <input class="forms__question" type="email" name="email" placeholder="Введите почту *" required>
             </label>
           </div>
-          <button class="forms__sent" type="submit">Отправить форму</button>
-          <small class="forms__legend">
-            <sup>*</sup> — обязательные поля
-          </small>
-        </form>
-      </section>
-    </main>
+        </fieldset>
+        <div class="forms__wrapper forms__wrapper--bgray">
+          <h3>С каким приложением путешествовали?</h3>
+          <ul class="forms__list checkbox-list">
+            <li class="checkbox-list__item">
+              <label class="checkbox-list__label">Pink для iOS
+                <input class="checkbox-list__input" type="radio" name="app-group" value="iOS" checked>
+              </label>
+            </li>
+            <li class="checkbox-list__item">
+              <label class="checkbox-list__label">Pink на Android
+                <input class="checkbox-list__input" type="radio" name="app-group" value="Android">
+              </label>
+            </li>
+            <li class="checkbox-list__item">
+              <label class="checkbox-list__label">Windows Phone
+                <input class="checkbox-list__input" type="radio" name="app-group" value="Windows">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="forms__wrapper">
+          <h3 class="forms__title">Опишите свои эмоции</h3>
+          <label class="forms__item">
+            <textarea name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях">
+              </textarea>
+          </label>
+        </div>
+        <button class="forms__sent" type="submit">Отправить форму</button>
+        <small class="forms__legend">
+          <sup>*</sup> — обязательные поля
+        </small>
+      </form>
+    </section>
+  </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
       <div class="page-footer__nav">
         <a class="nav__homepage" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="nav__logo" src="https://via.placeholder.com" width="50" height="50" alt="Логотип">
@@ -173,7 +177,8 @@
           <img class="copyright__logo" src="https://via.placeholder.com" width="50" height="50" alt="htmlacademy">
         </a>
       </p>
-      </div>
-      </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
