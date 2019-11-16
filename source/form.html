@@ -58,39 +58,44 @@
             <a href="#">КОНКУРС</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a">HTML ACADEMY</a>
+            <a>HTML ACADEMY</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main class="page-third">
-    <div class="page-third__wrapper">
-      <h1 class="page-third__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
-      <img class="page-third__background" src="https://via.placeholder.com/150x150">
+  <main class="page-next">
+    <div class="page-next__wrapper container">
+      <ul class="page-next__list next-list">
+        <li class="next-list__item">
+          <h1 class="next-list__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </li>
+      </ul>
     </div>
 
     <section class="forms">
-      <h2 class="visually-hidden">Введите данные формы</h2>
-      <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
-        бонусную карту! Пожалуйста, заполните форму ниже:</h3>
-      <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
-        <div class="forms__wrapper">
-          <p class="forms__group">
-            <label for="family-name">ФАМИЛИЯ:</label>
-            <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
-          </p>
-          <p class="forms__group">
-            <label for="name">ИМЯ:</label>
-            <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
-          </p>
-          <p class="forms__group">
-            <label for="user-patronym">ОТЧЕСТВО:</label>
-            <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
-          </p>
-        </div>
-
+      <div class="forms__wrapper container">
+        <h2 class="visually-hidden">Введите данные формы</h2>
+        <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+          бонусную карту!</h3>
+        <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
+          <div class="forms__wrapper">
+            <p class="forms__group">
+              <label for="family-name">ФАМИЛИЯ:</label>
+              <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
+            </p>
+            <p class="forms__group">
+              <label for="name">ИМЯ:</label>
+              <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
+            </p>
+            <p class="forms__group">
+              <label for="user-patronym">ОТЧЕСТВО:</label>
+              <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
+            </p>
+          </div>
+      </div>
+      <div class="forms__wrapper container">
         <fieldset class="forms__checkbox">
           <div class="checkbox__wrapper checkbox__wrapper--bgray">
             <h3>Ваши безбашенные достижения в путешествии</h3>
@@ -136,37 +141,38 @@
             </label>
           </div>
         </fieldset>
-        <div class="forms__wrapper forms__wrapper--bgray">
-          <h3>С каким приложением путешествовали?</h3>
-          <ul class="forms__list checkbox-list">
-            <li class="checkbox-list__item">
-              <label class="checkbox-list__label">Pink для iOS
-                <input class="checkbox-list__input" type="radio" name="app-group" value="iOS" checked>
-              </label>
-            </li>
-            <li class="checkbox-list__item">
-              <label class="checkbox-list__label">Pink на Android
-                <input class="checkbox-list__input" type="radio" name="app-group" value="Android">
-              </label>
-            </li>
-            <li class="checkbox-list__item">
-              <label class="checkbox-list__label">Windows Phone
-                <input class="checkbox-list__input" type="radio" name="app-group" value="Windows">
-              </label>
-            </li>
-          </ul>
-        </div>
-        <div class="forms__wrapper">
-          <h3 class="forms__title">Опишите свои эмоции</h3>
-          <label class="forms__item">
-            <textarea name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях">
-              </textarea>
-          </label>
-        </div>
+      </div>
+      <div class="forms__wrapper forms__wrapper--bgray container">
+        <h3>С каким приложением путешествовали?</h3>
+        <ul class="forms__list checkbox-list">
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label">Pink для iOS
+              <input class="checkbox-list__input" type="radio" name="app-group" value="iOS" checked>
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label">Pink на Android
+              <input class="checkbox-list__input" type="radio" name="app-group" value="Android">
+            </label>
+          </li>
+          <li class="checkbox-list__item">
+            <label class="checkbox-list__label">Windows Phone
+              <input class="checkbox-list__input" type="radio" name="app-group" value="Windows">
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="forms__wrapper container">
+        <h3 class="forms__title">Опишите свои эмоции</h3>
+        <label class="forms__item">
+          <textarea name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях">
+          </textarea>
+        </label>
         <button class="forms__sent" type="submit">Отправить форму</button>
         <small class="forms__legend">
           <sup>*</sup> — обязательные поля
         </small>
+      </div>
       </form>
     </section>
   </main>
