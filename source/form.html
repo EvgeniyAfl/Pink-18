@@ -15,7 +15,7 @@
     <div class="page-header__wrapper container">
       <ul class="page-header__list">
         <li class="page-header__item">
-          <a class="page-header__logo">
+          <a class="page-header__logo logo">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px"
               viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="page-header__item">
-          <button class="page-header__togle" type="button">
+          <button class="page-header__togle" type="button" aria-label="open-menu">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px"
               viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
@@ -67,31 +67,29 @@
 
   <main class="page-next">
     <div class="page-next__wrapper container">
-      <ul class="page-next__list next-list">
-        <li class="next-list__item">
-          <h1 class="next-list__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        </li>
-      </ul>
+      <div class="page-next__list next-list">
+        <h1 class="next-list__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </div>
 
     <section class="forms">
       <div class="forms__wrapper container">
         <h2 class="visually-hidden">Введите данные формы</h2>
-        <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
-          бонусную карту!</h3>
+        <b class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+          бонусную карту!</b>
         <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
           <div class="forms__wrapper">
             <p class="forms__group">
-              <label for="family-name">ФАМИЛИЯ:</label>
               <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
+              <label for="family-name">ФАМИЛИЯ:</label>
             </p>
             <p class="forms__group">
-              <label for="name">ИМЯ:</label>
               <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
+              <label for="name">ИМЯ:</label>
             </p>
             <p class="forms__group">
-              <label for="user-patronym">ОТЧЕСТВО:</label>
               <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
+              <label for="user-patronym">ОТЧЕСТВО:</label>
             </p>
           </div>
       </div>
@@ -140,7 +138,7 @@
       </div>
       <div class="forms__wrapper forms__wrapper--bgray container">
         <h3>С каким приложением путешествовали?</h3>
-        <ul class="forms__list checkbox-list">
+        <ul class="forms__checkbox-list">
           <li class="checkbox-list__item">
             <input class="checkbox-list__input" type="radio" name="app-group" id="ios" value="iOS" checked>
             <label for="ios">Pink для iOS</label>
