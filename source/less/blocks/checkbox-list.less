@@ -1,13 +1,27 @@
+.checkbox__wrapper {
+  background-color: @color-gray;
+}
+
 .checkbox__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   list-style: none;
   .indent-clear;
+  margin-bottom: 40px;
+}
+
+.checkbox__item,
+.checkbox-list__item {
+  margin-bottom: 60px;
 }
 
 .checkbox__decription {
   display: block;
   width: 220px;
   margin: 0 auto;
-  padding: 0;
+  padding: 40px 0;
 
   text-align: center;
   color: @color-red;
@@ -16,8 +30,7 @@
   line-height: 18px;
 }
 
-.checkbox-list__label {
-  text-align: center;
+.checkbox__label {
   color: @color-blue;
   font-size: 18px;
   font-weight: normal;

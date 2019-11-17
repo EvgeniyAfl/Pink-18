@@ -1,5 +1,7 @@
 .forms__info {
   display: block;
+  margin-bottom: 55px;
+
   color: @color-blue;
   font-size: 14px;
   font-weight: normal;
@@ -7,12 +9,24 @@
   text-align: center;
 }
 
+.forms__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+
 .forms__checkbox-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .indent-clear;
   list-style: none;
 }
 
 .forms__label {
+  padding-left: 15px;
+
   color: @color-red;
   font-size: 14px;
   font-weight: normal;
@@ -20,29 +34,73 @@
 }
 
 .forms__input {
+  overflow: visible;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+
   color: @color-blue;
   font-size: 18px;
   font-weight: normal;
   line-height: 30px;
 }
 
+.forms__group {
+  .indent-clear;
+}
+
 .forms__checkbox {
   width: 320px;
   border: none;
   .indent-clear;
-
-  background-color: @color-gray;
 }
 
 .forms__decription {
   display: block;
   width: 225px;
   margin: 0 auto;
-  padding: 0;
+  padding: 40px 0;
 
   text-align: center;
   color: @color-red;
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
+}
+
+.forms__decription--small-pad {
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.forms__text {
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
+
+  color: @color-blue;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.forms__legend {
+  color: @color-blue;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+  text-align: center;
+}
+
+.forms__sup {
+  color: @color-red;
+}
+
+.forms__wrapper--bgray {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: @color-gray;
 }
