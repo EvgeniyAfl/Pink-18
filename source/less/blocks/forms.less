@@ -1,5 +1,7 @@
 .forms__info {
   display: block;
+  width: 280px;
+  margin: auto;
   margin-top: 45px;
   margin-bottom: 55px;
 
@@ -21,7 +23,7 @@
   flex-direction: column;
   align-items: center;
 
-  .indent-clear;
+  .indent-clear();
   list-style: none;
 }
 
@@ -48,13 +50,17 @@
 }
 
 .forms__group {
-  .indent-clear;
+  .indent-clear();
+}
+
+.forms__item {
+  margin-bottom: 50px;
 }
 
 .forms__checkbox {
   width: 320px;
   border: none;
-  .indent-clear;
+  .indent-clear();
 }
 
 .forms__decription {
@@ -78,12 +84,26 @@
 .forms__text {
   box-sizing: border-box;
   width: 100%;
-  resize: vertical;
+  max-height: 200px;
+  resize: none;
 
   color: @color-blue;
   font-size: 18px;
   font-weight: normal;
   line-height: 30px;
+}
+
+.forms__send {
+  color: @color-white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+
+  border: none;
+  border-radius: 5px;
+  background-color: @color-green;
+
+  padding: 17px;
 }
 
 .forms__legend {

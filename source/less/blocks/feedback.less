@@ -1,13 +1,13 @@
 .slider {
   text-align: center;
-  .indent-clear;
+  .indent-clear();
   list-style: none;
 }
 
 .slider__feedback-list {
   list-style: none;
 
-  .indent-clear;
+  .indent-clear();
   margin-bottom: 40px;
 }
 
@@ -15,11 +15,12 @@
   position: relative;
   list-style: none;
 
-  .indent-clear;
+  .indent-clear();
   margin-bottom: 40px;
 }
 
 .slider__list--left-align::after {
+  display: block;
   position: absolute;
   content: "";
   height: 258px;
@@ -30,6 +31,7 @@
 }
 
 .slider__list--left-align::before {
+  display: block;
   position: absolute;
   content: "";
   height: 258px;
