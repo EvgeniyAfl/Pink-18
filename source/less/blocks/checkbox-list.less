@@ -1,6 +1,38 @@
-.forms__checkbox {
-  width: 320px;
+.checkbox__wrapper {
+  background-color: @color-gray;
+}
 
+.checkbox__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  list-style: none;
   .indent-clear;
+  margin-bottom: 40px;
+}
 
+.checkbox__item,
+.checkbox-list__item {
+  margin-bottom: 60px;
+}
+
+.checkbox__decription {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  padding: 40px 0;
+
+  text-align: center;
+  color: @color-red;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+.checkbox__label {
+  color: @color-blue;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 30px;
 }

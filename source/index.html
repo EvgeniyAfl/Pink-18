@@ -15,7 +15,7 @@
     <div class="page-header__wrapper container">
       <ul class="page-header__list">
         <li class="page-header__item">
-          <a class="page-header__logo">
+          <a class="page-header__logo logo">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px"
               viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="page-header__item">
-          <button class="page-header__togle" type="button">
+          <button class="page-header__togle" type="button" aria-label="open-menu">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px"
               viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
@@ -124,12 +124,12 @@
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <div class="advantages__wrapper container">
-        <ul class="advantages__advantages-list">
-          <li class="advantages-list__item">
-            <p class="advantages-list__info">Устали от серости мегаполиста?</p>
+        <ul class="advantages__list">
+          <li class="advantages-item">
+            <p class="advantages-info">Устали от серости мегаполиста?</p>
           </li>
-          <li class="advantages-list__item">
-            <p class="advantages-list__info">Нам есть, что вам предложить!</p>
+          <li class="advantages-item">
+            <p class="advantages-info">Нам есть, что вам предложить!</p>
           </li>
         </ul>
         <ul class="advantages__list offers-list">
@@ -161,24 +161,25 @@
       <div class="feedback__wrapper container">
         <div class="feedback__slider slider">
           <h2 class="visually-hidden">Отзывы</h2>
-          <ul class="slider__list">
-            <li class="slider__item">
-              <h3 class="slider__title">Николай Петров</h3>
-              <p class="slider__description">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+          <ul class="slider__feedback-list">
+            <li class="slider__feedback-item">
+              <h3 class="slider__feedback-title">Николай Петров</h3>
+              <p class="slider__feedback-description">«Это приложение перевернуло мой мир и позволило по-новому
+                взглянуть на
                 привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной
                 фотографии!»
               </p>
             </li>
           </ul>
-          <ul class="feedback__toggles slider">
+          <ul class="slider__toggles-list">
             <li class="slider__toggle-item">
-              <button class="slider__toggle" type="button">1</button>
+              <button class="slider__button" type="button">1</button>
             </li>
             <li class="slider__toggle-item">
-              <button class="slider__toggle" type="button">2</button>
+              <button class="slider__button" type="button">2</button>
             </li>
             <li class="slider__toggle-item">
-              <button class="slider__toggle" type="button">3</button>
+              <button class="slider__button" type="button">3</button>
             </li>
           </ul>
         </div>
@@ -196,9 +197,20 @@
           </li>
         </ul>
         <div class="price__slider slider">
-          <ul class="slider__list slider">
+          <ul class="slider__list slider__list--left-align">
             <li class="slider__item">
-              <p class="slider__title slider__title--normal-font">Розовый фильтр
+              <p class="slider__title">Розовый фильтр
+                <svg version=" 1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px"
+                  viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
+                  xml:space="preserve">
+                  <path fill="#3dc644"
+                    d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
+                </svg>
+              </p>
+            </li>
+            <li class="slider__item">
+              <p class="slider__title">Смайлики
                 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px"
                   viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
@@ -209,20 +221,9 @@
               </p>
             </li>
             <li class="slider__item">
-              <p class="slider__title slider__title--normal-font">Смайлики
+              <p class="slider__title">Комментарии
                 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.698px" height="16.09px"
-                  viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09"
-                  xml:space="preserve">
-                  <path fill="#3dc644"
-                    d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z" />
-                </svg>
-              </p>
-            </li>
-            <li class="slider__item">
-              <p class="slider__title slider__title--normal-font">Комментарии
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.752px" height="26.752px"
                   viewBox="0 0 26.752 26.752" enable-background="new 0 0 26.752 26.752" xml:space="preserve">
                   <path fill="#f25b26"
                     d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439 c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121 c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439 s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z" />
@@ -230,15 +231,15 @@
               </p>
             </li>
           </ul>
-          <ul class="price__toggles slider">
-            <li class="slider__toggle-item">
-              <button class="slider__toggle" type="button">1</button>
+          <ul class="price__toggles">
+            <li class="price__toggle-item">
+              <button class="price__toggle" type="button">1</button>
             </li>
-            <li class="slider__toggle-item">
-              <button class="slider__toggle" type="button">2</button>
+            <li class="price__toggle-item">
+              <button class="price__toggle" type="button">2</button>
             </li>
-            <li class="slider__toggle-item">
-              <button class="slider__toggle" type="button">3</button>
+            <li class="price__toggle-item">
+              <button class="price__toggle" type="button">3</button>
             </li>
           </ul>
         </div>
@@ -246,12 +247,13 @@
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__wrapper container">
-      <div class="page-footer__contacts contacts">
-        <h2 class="contacts__title">Остались вопросы?
-          Свяжитесь с нами!</h2>
+  <footer class="page-footer__footer-main container">
+    <div class="footer-main__wrapper">
+      <div class="footer-main__contacts contacts">
         <ul class="contacts__list">
+          <li class="contacts__item">
+            <h2 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h2>
+          </li>
           <li class="contacts__item">
             <h3 class="contacts__info">Звоните</h3>
             <p class="contacts__link">+7 (812) 555-66-66</p>
@@ -268,10 +270,9 @@
           </li>
         </ul>
       </div>
-      <a class="page-footer__map-info" href="#">
-        <img class="page-footer__map" src="https://via.placeholder.com/150x150" alt="ул. Большая
-          Конюшенная, 19/8">
-      </a>
+      <iframe class="footer-main__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6641963013305!2d30.32114839474708!3d59.937714149881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573931592685!5m2!1sru!2sru"
+        width="320" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
   </footer>
 </body>

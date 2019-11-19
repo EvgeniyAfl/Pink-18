@@ -1,0 +1,102 @@
+.upload__wrapper {
+  background-color: @color-gray;
+  border-bottom: 1px solid @color-gray-dark;
+}
+
+.upload__info {
+  display: block;
+  width: 200px;
+
+  margin: 45px auto;
+
+  color: @color-blue;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+  text-align: center;
+
+  background-color: @color-white;
+}
+
+.upload__image {
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.editor__wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  margin: 0 auto;
+  padding: 0;
+
+  width: 280px;
+}
+
+.editor__wrapper-toggles {
+  background-color: @color-gray;
+}
+
+.editor__toggles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  width: 280px;
+  min-height: 130px;
+}
+
+.editor__toggle {
+  color: @color-red;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+
+  border: 3px solid @color-red;
+  border-radius: 50px;
+  background-color: @color-gray;
+
+  padding: 17px;
+}
+
+.editor__scales {
+  position: relative;
+  display: flex;
+  height: 25px;
+  width: 280px;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 0;
+
+  background-color: @color-gray;
+}
+
+.editor__config--range-black {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 20px;
+  width: 240px;
+  height: 2px;
+
+  background-color: @color-black;
+}
+
+.editor__config--circle {
+  position: absolute;
+  content: "";
+  top: 4px;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+
+  border: 3px solid @color-red;
+  border-radius: 50px;
+  cursor: pointer;
+}

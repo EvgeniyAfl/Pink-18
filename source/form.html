@@ -15,7 +15,7 @@
     <div class="page-header__wrapper container">
       <ul class="page-header__list">
         <li class="page-header__item">
-          <a class="page-header__logo">
+          <a class="page-header__logo logo">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px"
               viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
@@ -33,7 +33,7 @@
           </a>
         </li>
         <li class="page-header__item">
-          <button class="page-header__togle" type="button">
+          <button class="page-header__togle" type="button" aria-label="open-menu">
             <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px"
               viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
@@ -67,113 +67,106 @@
 
   <main class="page-next">
     <div class="page-next__wrapper container">
-      <ul class="page-next__list next-list">
-        <li class="next-list__item">
-          <h1 class="next-list__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
-        </li>
-      </ul>
+      <div class="page-next__list next-list">
+        <h1 class="next-list__name">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </div>
 
     <section class="forms">
-      <div class="forms__wrapper container">
-        <h2 class="visually-hidden">Введите данные формы</h2>
-        <h3 class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
-          бонусную карту!</h3>
-        <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
-          <div class="forms__wrapper">
-            <p class="forms__group">
-              <label for="family-name">ФАМИЛИЯ:</label>
-              <input type="text" name="last-name" id="family-name" placeholder="Укажите фамилию *" required>
-            </p>
-            <p class="forms__group">
-              <label for="name">ИМЯ:</label>
-              <input type="text" name="first-name" id="name" placeholder="Введите ваше имя *" required>
-            </p>
-            <p class="forms__group">
-              <label for="user-patronym">ОТЧЕСТВО:</label>
-              <input type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
-            </p>
-          </div>
-      </div>
-      <div class="forms__wrapper container">
+      <div class="forms__container container">
+        <div class="forms__wrapper">
+          <h2 class="visually-hidden">Введите данные формы</h2>
+          <b class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
+            бонусную карту!</b>
+          <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
+            <div class="forms__wrapper">
+              <p class="forms__group">
+                <label class="forms__label" for="family-name">ФАМИЛИЯ:</label>
+                <input class="forms__input" type="text" name="last-name" id="family-name"
+                  placeholder="Укажите фамилию *" required>
+              </p>
+              <p class="forms__group">
+                <label class="forms__label" for="name">ИМЯ:</label>
+                <input class="forms__input" type="text" name="first-name" id="name" placeholder="Введите ваше имя *"
+                  required>
+              </p>
+              <p class="forms__group">
+                <label class="forms__label" for="user-patronym">ОТЧЕСТВО:</label>
+                <input class="forms__input" type="text" name="patronym" id="user-patronym"
+                  placeholder="Ну и отчество тоже">
+              </p>
+            </div>
+        </div>
         <fieldset class="forms__checkbox">
-          <div class="checkbox__wrapper checkbox__wrapper--bgray">
-            <h3>Ваши безбашенные достижения в путешествии</h3>
-            <ul class="checkbox__list check-list">
-              <li class="check-list__item">
-                <label class="check-list__label">Сделал селфи с акулой</label>
-                <input class="check-list__input" type="checkbox" name="make-selfy" checked>
+          <div class="checkbox__wrapper">
+            <h3 class="checkbox__decription">Ваши безбашенные достижения в путешествии</h3>
+            <ul class="checkbox__list">
+              <li class="checkbox__item">
+                <input class="checkbox__input" type="checkbox" name="make-selfy" id="selfy" checked>
+                <label class="checkbox__label" for="selfy">Сделал селфи с акулой</label>
               </li>
-              <li class="check-list__item">
-                <label class="check-list__label">Обгорел на пляже
-                  <input class="check-list__input" type="checkbox" name="on-beach" checked>
-                </label>
+              <li class="checkbox__item">
+                <input class="checkbox__input" type="checkbox" name="on-beach" id="beach" checked>
+                <label class="checkbox__label" for="beach">Обгорел на пляже</label>
               </li>
-              <li class="check-list__item">
-                <label class="check-list__label">Видел Чака Норриса
-                  <input class="check-list__input" type="checkbox" name="Chuck-Norris">
-                </label>
+              <li class="checkbox__item">
+                <input class="checkbox__input" type="checkbox" name="Chuck-Norris" id="chuck">
+                <label class="checkbox__label" for="chuck">Видел Чака Норриса</label>
               </li>
-              <li class="check-list__item">
-                <label class="check-list__label">Накупил сувениров
-                  <input class="check-list__input" type="checkbox" name="Buy-souvenir">
-                </label>
+              <li class="checkbox__item">
+                <input class="checkbox__input" type="checkbox" name="Buy-souvenir" id="souvenir">
+                <label class="checkbox__label" for="souvenir">Накупил сувениров</label>
               </li>
-              <li class="check-list__item">
-                <label class="check-list__label">Удержал башню
-                  <input class="check-list__input" type="checkbox" name="Take-tower" checked>
-                </label>
+              <li class="checkbox__item">
+                <input class="checkbox__input" type="checkbox" name="Take-tower" id="tower" checked>
+                <label class="checkbox__label" for="tower">Удержал башню</label>
               </li>
-              <li class="check-list__item">
-                <label class="check-list__label">Разгромил отель
-                  <input class="check-list__input" type="checkbox" name="smash-hotel">
+              <li class="checkbox__item">
+                <input class="checkbox__input" type="checkbox" name="smash-hotel" id="hotel">
+                <label class="checkbox__label" for="hotel">Разгромил отель
                 </label>
               </li>
             </ul>
           </div>
           <div class="forms__wrapper">
-            <label class="forms__item">Номер телефона
-              <input class="forms__question" type="tel" name="phone number" pattern="[0-9]{11}"
-                placeholder="Номер, пожалуйста">
-            </label>
-            <label class="forms__item">адрес почты
-              <input class="forms__question" type="email" name="email" placeholder="Введите почту *" required>
-            </label>
+            <label for="number" class="forms__label">НОМЕР ТЕЛЕФОНА</label>
+            <input class="forms__input" type="tel" name="phone number" id="number" pattern="[0-9]{11}"
+              placeholder="Номер, пожалуйста">
+            <label for="mail" class="forms__label">АДРЕС ПОЧТЫ</label>
+            <input class="forms__input" type="email" name="email" id="mail" placeholder="Введите почту *" required>
           </div>
         </fieldset>
-      </div>
-      <div class="forms__wrapper forms__wrapper--bgray container">
-        <h3>С каким приложением путешествовали?</h3>
-        <ul class="forms__list checkbox-list">
-          <li class="checkbox-list__item">
-            <label class="checkbox-list__label">Pink для iOS
-              <input class="checkbox-list__input" type="radio" name="app-group" value="iOS" checked>
-            </label>
-          </li>
-          <li class="checkbox-list__item">
-            <label class="checkbox-list__label">Pink на Android
-              <input class="checkbox-list__input" type="radio" name="app-group" value="Android">
-            </label>
-          </li>
-          <li class="checkbox-list__item">
-            <label class="checkbox-list__label">Windows Phone
-              <input class="checkbox-list__input" type="radio" name="app-group" value="Windows">
-            </label>
-          </li>
-        </ul>
-      </div>
-      <div class="forms__wrapper container">
-        <h3 class="forms__title">Опишите свои эмоции</h3>
-        <label class="forms__item">
-          <textarea name="user-text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях">
+        <div class="forms__wrapper forms__wrapper--bgray">
+          <h3 class="forms__decription">С каким приложением путешествовали?</h3>
+          <ul class="forms__checkbox-list">
+            <li class="checkbox-list__item">
+              <input class="checkbox-list__input" type="radio" name="app-group" id="ios" value="iOS" checked>
+              <label class="checkbox-list__label" for="ios">Pink для iOS</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-list__input" type="radio" name="app-group" id="android" value="Android">
+              <label class="checkbox-list__label" for="android">Pink на Android</label>
+            </li>
+            <li class="checkbox-list__item">
+              <input class="checkbox-list__input" type="radio" name="app-group" id="windows" value="Windows">
+              <label class="checkbox-list__label" for="windows">Windows Phone</label>
+            </li>
+          </ul>
+        </div>
+        <div class="forms__wrapper">
+          <h3 class="forms__decription forms__decription--small-pad">Опишите свои эмоции</h3>
+          <label class="forms__item">
+            <textarea class="forms__text" name="user-text" rows="5"
+              placeholder="Можно прям в красках, не стесняясь в выражениях">
           </textarea>
-        </label>
-        <button class="forms__sent" type="submit">Отправить форму</button>
-        <small class="forms__legend">
-          <sup>*</sup> — обязательные поля
-        </small>
+          </label>
+          <button class="forms__sent" type="submit">Отправить форму</button>
+          <small class="forms__legend">
+            <sup class="forms__sup">*</sup> — обязательные поля
+          </small>
+        </div>
+        </form>
       </div>
-      </form>
     </section>
   </main>
 
