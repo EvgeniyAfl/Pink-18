@@ -1,9 +1,20 @@
-.main-photo {
+.main-photo__wrapper {
   max-height: 418px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .main-photo__wrapper {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  .main-photo__picture {
+    margin: 0 30%;
+  }
 }
 
 .main-photo__info {

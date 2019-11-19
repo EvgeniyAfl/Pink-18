@@ -13,10 +13,10 @@
 @import "blocks/nav.less";
 @import "blocks/next-list.less";
 @import "blocks/offers-list.less";
-@import "blocks/page-header.less";
 @import "blocks/price.less";
 @import "blocks/social.less";
 @import "blocks/upload.less";
+@import "blocks/user-list.less";
 @import "mixin.less";
 @import "variables.less";
 
@@ -56,4 +56,16 @@ input[type="radio"].visually-hidden {
   width: 320px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1200px;
+  }
 }
