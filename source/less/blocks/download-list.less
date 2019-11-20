@@ -45,6 +45,27 @@
   background-color: #1d2631;
 }
 
+@media (min-width: @tablet-width) {
+  .apps-function__wrapper {
+    background: transparent;
+  }
+  .apps-function {
+    position: absolute;
+    bottom: 70px;
+    left: 35px;
+    z-index: 2;
+
+    .indent-clear();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .apps-function{
+    bottom: 70px;
+    left: 125px;
+  }
+}
+
 .download-list__info {
   .indent-clear();
 }
