@@ -18,3 +18,39 @@
   font-size: 24px;
   text-align: center;
 }
+
+@media (min-width: @tablet-width) {
+  .page-next__wrapper {
+    height: 330px;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: -256px -120px;
+    background-repeat: no-repeat;
+  }
+
+  .page-next__title {
+    display: block;
+    padding-top: 55px;
+
+    font-size: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-next__wrapper {
+    width: 1200px;
+    height: 280px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: -692px -108px;
+    background-repeat: no-repeat;
+  }
+
+  .page-next__title {
+    width: 820px;
+    display: block;
+
+    margin: 0 auto;
+
+    font-size: 50px;
+  }
+}

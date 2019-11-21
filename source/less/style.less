@@ -54,7 +54,7 @@ input[type="radio"].visually-hidden {
 
 .container {
   width: 320px;
-  padding: 0 20px;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -62,10 +62,20 @@ input[type="radio"].visually-hidden {
   .container {
     width: 660px;
   }
+
+  body {
+    width: 660px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .container {
     width: 1200px;
+  }
+
+  body {
+    width: 1200px;
+    margin: 0 auto;
   }
 }

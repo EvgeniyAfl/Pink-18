@@ -1,3 +1,16 @@
 .page-footer__nav {
   margin-bottom: 40px;
 }
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .indent-clear();
+  }
+
+  .page-footer__nav {
+    .indent-clear();
+  }
+}
