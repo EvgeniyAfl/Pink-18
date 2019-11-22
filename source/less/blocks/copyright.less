@@ -20,10 +20,21 @@
 }
 
 .copyright__site svg {
-  content: "";
   position: absolute;
   width: 40px;
   height: 40px;
   top: -8px;
   left: 94px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright__wrapper {
+    width: 130px;
+
+    margin: 0;
+  }
+
+  .copyright {
+    .indent-clear();
+  }
 }

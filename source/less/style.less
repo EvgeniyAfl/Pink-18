@@ -13,16 +13,16 @@
 @import "blocks/nav.less";
 @import "blocks/next-list.less";
 @import "blocks/offers-list.less";
-@import "blocks/page-header.less";
 @import "blocks/price.less";
 @import "blocks/social.less";
 @import "blocks/upload.less";
+@import "blocks/user-list.less";
 @import "mixin.less";
 @import "variables.less";
 
 
 body {
-  .indent-clear;
+  .indent-clear();
 
   font-family: "Open Sans", "Arial", sans-serif;
   color: @color-black;
@@ -45,15 +45,37 @@ input[type="radio"].visually-hidden {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
-  padding: 0;
+  .indent-clear();
   white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 .container {
   width: 320px;
-  padding: 0 20px;
+  padding: 0;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 660px;
+  }
+
+  body {
+    width: 660px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1200px;
+  }
+
+  body {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }

@@ -5,14 +5,127 @@
   margin-bottom: 50px;
 }
 
-.advantages-item {
+.advantages__item {
   color: @color-blue;
   font-size: 24px;
   font-weight: lighter;
   text-align: center;
 }
 
-.advantages-info {
+.advantages__info {
   margin: 0;
   padding: 0;
+}
+
+.advantages__add-wrapper {
+  display: none;
+}
+
+.add {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__item {
+    font-size: 40px;
+  }
+
+  .advantages__item:last-child {
+    display: block;
+    width: 350px;
+
+    margin: 0 auto;
+  }
+
+  .advantages__list {
+    margin-bottom: 100px;
+  }
+
+  .advantages__add-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 660px;
+    height: 385px;
+  }
+
+  .add {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  .add__description {
+    color: @color-black;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  .add__info {
+    color: @color-blue;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+
+  .add__link {
+    color: @color-red;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+    text-decoration: underline;
+  }
+
+  .advantages__add-wrapper::after {
+    position: absolute;
+    content: "";
+    width: 195px;
+    height: 195px;
+
+    top: 68px;
+    left: 23px;
+
+    border: 15px solid @color-red;
+    border-radius: 50%;
+  }
+
+  .advantages__add-time {
+    position: absolute;
+    top: 95px;
+    left: 80px;
+
+    color: @color-red;
+    font-size: 96px;
+    font-weight: bold;
+    line-height: 149px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    font-size: 50px;
+  }
+
+  .advantages__item:last-child {
+    width: 420px;
+  }
+
+  .add {
+    display: block;
+  }
+
+  .advantages__add-wrapper {
+    width: 960px;
+
+    margin: 0 auto;
+    margin-bottom: 75px;
+    margin-top: -385px;
+    z-index: 2;
+  }
 }
