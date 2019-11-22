@@ -1,3 +1,8 @@
+.price {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .price__total-list {
   color: @color-white;
   line-height: 30px;
@@ -44,4 +49,16 @@
   margin: 0;
   padding-top: 95px;
   padding-bottom: 45px;
+}
+
+@media (min-width: tablet-width) {
+  .price {
+    width: 660px;
+  }
+}
+
+@media (min-width: desktop-width) {
+  .price {
+    width: 1200px;
+  }
 }

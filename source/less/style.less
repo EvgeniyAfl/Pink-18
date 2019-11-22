@@ -16,7 +16,6 @@
 @import "blocks/price.less";
 @import "blocks/social.less";
 @import "blocks/upload.less";
-@import "blocks/user-list.less";
 @import "mixin.less";
 @import "variables.less";
 
@@ -59,23 +58,13 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: @tablet-width) {
-  .container {
-    width: 660px;
-  }
-
   body {
-    width: 660px;
-    margin: 0 auto;
+    min-width: 660px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .container {
-    width: 1200px;
-  }
-
   body {
-    width: 1200px;
-    margin: 0 auto;
+    min-width: 1200px;
   }
 }

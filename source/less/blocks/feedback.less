@@ -1,3 +1,8 @@
+.feedback {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .slider {
   text-align: center;
   .indent-clear();
@@ -98,6 +103,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .feedback {
+    width: 660px;
+  }
+
   .slider__feedback-list {
     width: 620px;
     display: flex;
@@ -132,6 +141,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedback {
+    width: 1200px;
+  }
+
   .feedback-info--tablet-desktop {
     display: block;
   }
