@@ -27,23 +27,30 @@
   font-size: 24px;
   font-weight: lighter;
   text-align: center;
+
+  padding-bottom: 25px;
 }
 
 .price__toggles {
+  position: absolute;
   display: flex;
   width: 88px;
+  bottom: 32px;
+  left: 110px;
   align-items: center;
   justify-content: space-around;
   list-style: none;
 
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  margin-bottom: 50px;
 
   background-color: @color-gray;
 }
 
 .price__wrapper {
+  display: block;
+  position: relative;
+
   background-color: @color-gray;
 
   margin: 0;
@@ -51,14 +58,158 @@
   padding-bottom: 45px;
 }
 
-@media (min-width: tablet-width) {
+.price__triangle {
+  display: block;
+  position: absolute;
+  width: 320px;
+
+  top: -35px;
+  left: 0;
+}
+
+.table {
+  display: none;
+  width: 620px;
+
+  margin: 0 auto;
+
+  text-align: center;
+  color: @color-white;
+
+  border-collapse: collapse;
+  border-radius: 3px;
+  background-color: @color-white;
+}
+
+.table__description {
+  color: @color-white;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  .indent-clear();
+}
+
+.table__row {
+  border: 2px solid @color-gray;
+}
+
+.table__price {
+  color: @color-white;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+.table__title {
+  border: 2px solid @color-gray;
+  width: 161px;
+
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  color: @color-blue;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.table__title--bg-gray {
+  background-color: @color-gray;
+}
+
+.table__title--bg-blue {
+  background-color: @color-blue;
+}
+
+.table__title--left-align {
+  text-align: left;
+}
+
+@media (min-width: @tablet-width) {
   .price {
     width: 660px;
   }
+
+  .price__wrapper {
+    display: none;
+  }
+
+  .price__table-wrapper {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    min-height: 330px;
+
+    padding-top: 90px;
+
+    background-color: @color-gray;
+  }
+
+  .price__triangle-table {
+    display: block;
+    position: absolute;
+    width: 660px;
+    top: -21px;
+    left: 0;
+  }
+
+  .table {
+    display: block;
+  }
+
+  .price__triangle {
+    width: 660px;
+
+    top: -21px;
+    left: 0;
+  }
 }
 
-@media (min-width: desktop-width) {
+@media (min-width: @desktop-width) {
   .price {
     width: 1200px;
+  }
+
+  .price__triangle {
+    width: 1200px;
+
+    top: 0;
+    left: 0;
+  }
+
+  .price__triangle-table {
+    display: block;
+    position: absolute;
+    width: 1200px;
+    top: 0;
+    left: 0;
+  }
+
+  .table {
+    width: 940px;
+  }
+
+  .table__title {
+    width: 200px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .table__description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .table__price {
+    display: block;
+
+    padding-bottom: 20px;
+
+    font-size: 24px;
   }
 }

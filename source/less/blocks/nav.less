@@ -2,15 +2,21 @@
   margin-bottom: 40px;
 }
 
+.page-footer__wrapper {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer__wrapper {
+    width: 660px;
     height: 120px;
+
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 
-    .indent-clear();
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .page-footer__nav {
