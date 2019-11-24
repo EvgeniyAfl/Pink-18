@@ -36,3 +36,37 @@
   font-weight: normal;
   line-height: 30px;
 }
+
+@media (min-width: @tablet-width) {
+  .checkbox__wrapper {
+    background: none;
+  }
+
+  .checkbox__list {
+    width: 660px;
+    align-items: flex-start;
+
+    padding-left: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkbox__wrapper {
+    width: 960px;
+  }
+
+  .checkbox__list {
+    width: 960px;
+    height: 230px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 0;
+  }
+
+  .checkbox__item {
+    margin: 0;
+    padding-left: 60px;
+  }
+}

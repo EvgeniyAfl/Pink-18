@@ -2,11 +2,23 @@
   margin-bottom: 40px;
 }
 
-.page-footer__wrapper {
+.page-footer__main-wrapper {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
+  .page-footer__main-wrapper {
+    width: 660px;
+    height: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .page-footer__wrapper {
     width: 660px;
     height: 120px;
@@ -21,5 +33,19 @@
 
   .page-footer__nav {
     .indent-clear();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__main-wrapper {
+    width: 960px;
+    height: 120px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    margin: 0 auto;
+    padding: 0;
   }
 }
