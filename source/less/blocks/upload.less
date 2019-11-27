@@ -1,9 +1,16 @@
+.upload {
+  width: 320px;
+
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
 .upload__wrapper {
   background-color: @color-gray;
   border-bottom: 1px solid @color-gray-dark;
 }
 
-.upload__info {
+.photos__upload-info {
   display: block;
   width: 200px;
 
@@ -29,83 +36,13 @@
   display: none;
 }
 
-.editor__wrapper {
-  display: flex;
-  justify-content: space-around;
-
-  margin: 0 auto;
-  padding: 0;
-
-  width: 280px;
-}
-
-.editor__wrapper-toggles {
-  background-color: @color-gray;
-}
-
-.editor__toggles {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-  width: 280px;
-}
-
-.editor__toggle {
-  color: @color-red;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 18px;
-
-  border: 3px solid @color-red;
-  border-radius: 50px;
-  background-color: @color-gray;
-
-  margin-bottom: 15px;
-  padding: 17px;
-}
-
-.editor__scales {
-  position: relative;
-  display: flex;
-  height: 25px;
-  width: 280px;
-
-  margin: 0 auto;
-  margin-bottom: 30px;
-  padding: 0;
-
-  background-color: @color-gray;
-}
-
-.editor__config--range-black {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  width: 240px;
-  height: 2px;
-
-  background-color: @color-black;
-}
-
-.editor__config--circle {
-  position: absolute;
-  top: 4px;
-  right: 30px;
-  width: 12px;
-  height: 12px;
-
-  border: 3px solid @color-red;
-  border-radius: 50px;
-  background-color: @color-gray;
-  cursor: pointer;
-}
-
 @media (min-width: @tablet-width) {
+  .upload {
+    width: 100%;
+
+    background-color: @color-gray;
+  }
+
   .upload__image {
     display: none;
   }
@@ -113,10 +50,10 @@
   .upload__image-tablet {
     display: block;
 
-    padding: 60px 20px;
+    padding: 60px 0;
   }
 
-  .upload__info {
+  .photos__upload-info {
     width: 460px;
 
     font-size: 18px;
@@ -125,25 +62,36 @@
   .upload__wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 660px;
+    width: 620px;
     height: 520px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+
+    border: none;
   }
 
   .upload__editor {
-    margin: 0 auto;
-    padding-top: 20px;
-  }
+    width: 300px;
 
-  .editor__toggle {
-    margin-bottom: 23px;
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .upload {
+    background: none;
+  }
+
   .upload__wrapper {
-    width: 960px;
+    width: 940px;
 
     margin: 0 auto;
+    padding: 0;
+
+    background-color: @color-gray;
   }
 
   .upload__image-tablet {
@@ -156,23 +104,7 @@
     padding: 50px;
   }
 
-  .editor__wrapper-toggles {
-    display: flex;
-  }
-
   .upload__editor {
     width: 410px;
-  }
-
-  .editor__toggle {
-    width: 180px;
-  }
-
-  .editor__toggles {
-    width: 100%;
-    flex-direction: row;
-
-    margin: 0;
-    padding: 0;
   }
 }

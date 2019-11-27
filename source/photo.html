@@ -125,20 +125,24 @@
     <div class="page-next__wrapper">
       <h1 class="page-next__title">Фотографии пользователей</h1>
     </div>
+    <p class="page-next__photo-info">
+        Взгляните на фотографии, которые выкладывают пользователи!
+        Видите, как не хатает ваших?
+      </p>
+    <img class="page-next__main-picture--tablet-view" src="img/panorama-tablet@1x.jpg" width="660" height="510"
+            alt="Панорама дня">
+      <img class="page-next__main-picture--desktop-view" src="img/panorama-desktop@1x.jpg" width="1200" height="512"
+            alt="Панорама дня">
 
     <section class="photos">
       <h2 class="visually-hidden">Фотографии пользователей</h2>
       <div class="photos-wrapper">
         <p class="photos__info">
           Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, ка не хатает ваших?
+          Видите, как не хатает ваших?
         </p>
         <div class="photos__main">
-          <img class="main__picture" src="img/panorama-mobile@1x.jpg" width="320" height="138" alt="Панорама дня">
-          <img class="main__picture--tablet-view" src="img/panorama-tablet@1x.jpg" width="660" height="510"
-            alt="Панорама дня">
-          <img class="main__picture--desktop-view" src="img/panorama-desktop@1x.jpg" width="1200" height="512"
-            alt="Панорама дня">
+            <img class="main__main-picture" src="img/panorama-mobile@1x.jpg" width="320" height="138" alt="Панорама дня">
           <div class="main__wrapper">
             <p class="main__user-info user-info--tablet-view">
               <h3 class="main__name">Анна
@@ -296,22 +300,24 @@
             </p>
           </li>
         </ul>
+        <p class="photos__upload-info">Затмите их всех!<br>
+          Выкладывайте все, что накопилось в телефоне!
+        </p>
       </div>
     </section>
 
     <section class="upload">
       <h2 class="visually-hidden">Загрузка фото</h2>
-      <p class="upload__info">Затмите их всех!<br>
-        Выкладывайте все, что накопилось в телефоне!</p>
+
       <div class="upload__wrapper">
         <img class="upload__image" src="img/photo-road-mobile@1x.jpg" width="280" height="377" alt="Фото редактора">
-        <img class="upload__image-tablet" src="img/photo-road-tablet@1x.jpg" width="320" height="400"
+        <img class="upload__image-tablet" src="img/photo-road-tablet@1x.jpg" width="300" height="400"
           alt="Фото редактора">
         <img class="upload__image-desktop" src="img/photo-road-desktop@1x.jpg" width="320" height="400"
           alt="Фото редактора">
         <div class="upload__editor editor">
           <div class="editor__wrapper">
-            <div class="editor__tool editor__tools--cut">
+            <div class="editor__tool editor__tool--cut">
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
                 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
@@ -319,8 +325,10 @@
                 <path fill="#d22856"
                   d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z" />
               </svg>
+              <div class="editor__tool editor__tool--range-black editor__tool--tablet-desktop"></div>
+            <div class="editor__tool editor__tool--circle editor__tool--tablet-desktop"></div>
             </div>
-            <div class="editor__tool editor__tools--color">
+            <div class="editor__tool editor__tool--color">
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px"
                 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
@@ -329,8 +337,10 @@
                   d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z" />
                 <rect fill="#b5b9be" y="40" width="48" height="3" />
               </svg>
+              <div class="editor__tool editor__tool--range-black editor__tool--tablet-desktop"></div>
+            <div class="editor__tool editor__tool--circle editor__tool--tablet-desktop"></div>
             </div>
-            <div class="editor__tool editor__tools--balance">
+            <div class="editor__tool editor__tool--balance">
               <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px"
                 viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92"
@@ -339,11 +349,11 @@
                   d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z" />
                 <path fill="#b5b9be" d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519" />
               </svg>
+              <div class="editor__tool editor__tool--range-black editor__tool--tablet-desktop"></div>
+            <div class="editor__tool editor__tool--circle editor__tool--tablet-desktop"></div>
             </div>
-          </div>
-          <div class="editor__scales">
-            <div class="editor__config editor__config--range-black"></div>
-            <div class="editor__config editor__config--circle"></div>
+            <div class="editor__tool editor__tool--range-black editor__tool-mobibe"></div>
+            <div class="editor__tool editor__tool--circle editor__tool-mobibe"></div>
           </div>
           <div class="editor__wrapper-toggles">
             <div class="editor__toggles">
@@ -359,7 +369,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__nav">
-        <a class="nav__homepage" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__homepage" href="https://htmlacademy.ru/intensive/adaptive">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375"
             enable-background="new 0 0 146.3 40.375" xml:space="preserve">
