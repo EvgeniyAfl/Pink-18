@@ -69,14 +69,23 @@
   .main-nav {
     width: 100%;
 
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 
     background-color: @color-blue;
+  }
+
+  .main-nav__navigation {
+    margin: 0;
+    padding: 20px;
   }
 
   .main-nav__wrapper {
     width: 100%;
     min-height: 200px;
+
+    margin: 0;
+    padding: 0;
   }
 
   .logo--mobile,
@@ -99,6 +108,7 @@
   }
 
   .site-list {
+    min-width: 660px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -135,6 +145,11 @@
   }
 
   .main-nav__navigation {
+    width: 152px;
+
+    margin: 0;
+    padding: 20px 10px;
+
     border: none;
   }
 
