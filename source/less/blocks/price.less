@@ -1,5 +1,5 @@
 .price {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -36,7 +36,6 @@
 }
 
 .price__toggles {
-  position: absolute;
   display: flex;
   width: 88px;
   bottom: 32px;
@@ -45,10 +44,8 @@
   justify-content: space-around;
   list-style: none;
 
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-
-  background-color: @color-gray;
 }
 
 .price__wrapper {
@@ -65,7 +62,7 @@
 .price__triangle {
   display: block;
   position: absolute;
-  width: 320px;
+  width: 100%;
 
   top: -35px;
   left: 0;
@@ -134,7 +131,7 @@
 
 @media (min-width: @tablet-width) {
   .price {
-    width: 660px;
+    width: 100%;
   }
 
   .price__wrapper {
@@ -156,7 +153,7 @@
   .price__triangle-table {
     display: block;
     position: absolute;
-    width: 660px;
+    width: 100%;
     top: -21px;
     left: 0;
   }
@@ -175,7 +172,7 @@
 
 @media (min-width: @desktop-width) {
   .price {
-    width: 1200px;
+    background-color: @color-gray;
   }
 
   .price__triangle {
@@ -188,8 +185,8 @@
   .price__triangle-table {
     display: block;
     position: absolute;
-    width: 1200px;
-    top: 0;
+    width: 100%;
+    top: -10px;
     left: 0;
   }
 
@@ -215,5 +212,20 @@
     padding-bottom: 20px;
 
     font-size: 24px;
+  }
+
+  .price__wrapper {
+    display: none;
+  }
+
+  .price__table-wrapper {
+    position: relative;
+
+    width: 940px;
+    min-height: 330px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-top: 90px;
   }
 }
