@@ -1,9 +1,20 @@
-.upload__wrapper {
+.upload {
+  width: 100%;
+
+  margin: 0 auto;
+  margin-bottom: 40px;
+
   background-color: @color-gray;
-  border-bottom: 1px solid @color-gray-dark;
 }
 
-.upload__info {
+.upload__wrapper {
+  width: 320px;
+
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.photos__upload-info {
   display: block;
   width: 200px;
 
@@ -24,78 +35,80 @@
   margin-bottom: 40px;
 }
 
-.editor__wrapper {
-  display: flex;
-  justify-content: space-around;
-
-  margin: 0 auto;
-  padding: 0;
-
-  width: 280px;
+.upload__image-tablet,
+.upload__image-desktop {
+  display: none;
 }
 
-.editor__wrapper-toggles {
-  background-color: @color-gray;
+@media (min-width: @tablet-width) {
+  .upload {
+    width: 100%;
+
+    background-color: @color-gray;
+  }
+
+  .upload__image {
+    display: none;
+  }
+
+  .upload__image-tablet {
+    display: block;
+
+    padding: 60px 0;
+  }
+
+  .photos__upload-info {
+    width: 460px;
+
+    font-size: 18px;
+  }
+
+  .upload__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+    height: 520px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+
+    border: none;
+  }
+
+  .upload__editor {
+    width: 300px;
+
+    margin: 0;
+    margin-top: 60px;
+    margin-left: 20px;
+  }
 }
 
-.editor__toggles {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+@media (min-width: @desktop-width) {
+  .upload {
+    background: none;
+  }
 
-  margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  .upload__wrapper {
+    width: 940px;
 
-  width: 280px;
-  min-height: 130px;
-}
+    margin: 0 auto;
+    padding: 0;
 
-.editor__toggle {
-  color: @color-red;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 18px;
+    background-color: @color-gray;
+  }
 
-  border: 3px solid @color-red;
-  border-radius: 50px;
-  background-color: @color-gray;
+  .upload__image-tablet {
+    display: none;
+  }
 
-  padding: 17px;
-}
+  .upload__image-desktop {
+    display: block;
 
-.editor__scales {
-  position: relative;
-  display: flex;
-  height: 25px;
-  width: 280px;
+    padding: 50px;
+  }
 
-  margin: 0 auto;
-  margin-bottom: 30px;
-  padding: 0;
-
-  background-color: @color-gray;
-}
-
-.editor__config--range-black {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  width: 240px;
-  height: 2px;
-
-  background-color: @color-black;
-}
-
-.editor__config--circle {
-  position: absolute;
-  top: 4px;
-  right: 30px;
-  width: 12px;
-  height: 12px;
-
-  border: 3px solid @color-red;
-  border-radius: 50px;
-  background-color: @color-gray;
-  cursor: pointer;
+  .upload__editor {
+    width: 410px;
+  }
 }

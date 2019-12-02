@@ -1,0 +1,138 @@
+.page-next__wrapper {
+  width: 100%;
+  height: 170px;
+
+  margin: 0 auto;
+  margin-bottom: 55px;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 0 -70px;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: @mobile-width-only) {
+  .page-next__wrapper {
+    background-size: cover;
+  }
+}
+
+.page-next__title {
+  display: block;
+  width: 235px;
+
+  margin: 0 auto;
+  padding: 32px;
+
+  color: @color-white;
+  font-weight: lighter;
+  font-size: 24px;
+  text-align: center;
+}
+
+.page-next__main-picture--tablet-view,
+.page-next__main-picture--desktop-view {
+  display: none;
+}
+
+.photos__info,
+.page-next__photo-info {
+  display: block;
+  width: 250px;
+
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 55px;
+
+  color: #283645;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+  text-align: center;
+}
+
+.page-next__photo-info {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-next__wrapper {
+    width: 100%;
+    height: 330px;
+
+    margin: 0 auto;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 0 -112px;
+    background-repeat: no-repeat;
+  }
+
+  .page-next__title {
+    display: block;
+    width: 485px;
+
+    margin: 0 auto;
+    padding-top: 55px;
+
+    font-size: 50px;
+  }
+
+  .page-next__main-picture--tablet-view {
+    display: block;
+
+    margin: 0 auto;
+  }
+
+  .page-next__photo-info {
+    display: block;
+    width: 450px;
+
+    margin-top: 100px;
+    margin-bottom: 85px;
+    padding: 0;
+
+    font-size: 18px;
+  }
+
+  .photos__info {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-next__wrapper {
+    width: 100%;
+    height: 280px;
+
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 0 -110px;
+    background-repeat: no-repeat;
+  }
+
+  .page-next__title {
+    width: 500px;
+    display: block;
+
+    margin: 0 auto;
+
+    font-size: 50px;
+  }
+
+  .page-next__photo-info {
+    display: block;
+    width: 580px;
+
+    margin: 100px auto;
+
+    font-size: 18px;
+  }
+
+  .page-next__main-picture--tablet-view {
+    display: none;
+  }
+
+  .page-next__main-picture--desktop-view {
+    display: block;
+
+    margin: 0 auto;
+  }
+}

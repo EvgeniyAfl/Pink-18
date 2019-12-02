@@ -13,13 +13,13 @@
 @import "blocks/nav.less";
 @import "blocks/next-list.less";
 @import "blocks/offers-list.less";
+@import "blocks/page-footer.less";
+@import "blocks/page-next.less";
 @import "blocks/price.less";
 @import "blocks/social.less";
 @import "blocks/upload.less";
-@import "blocks/user-list.less";
 @import "mixin.less";
 @import "variables.less";
-
 
 body {
   .indent-clear();
@@ -27,6 +27,8 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
   color: @color-black;
   background-color: @color-white;
+
+  // overflow-x: hidden;
 }
 
 a {
@@ -59,23 +61,13 @@ input[type="radio"].visually-hidden {
 }
 
 @media (min-width: @tablet-width) {
-  .container {
-    width: 660px;
-  }
-
   body {
-    width: 660px;
-    margin: 0 auto;
+    min-width: 660px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .container {
-    width: 1200px;
-  }
-
   body {
-    width: 1200px;
-    margin: 0 auto;
+    min-width: 960px;
   }
 }

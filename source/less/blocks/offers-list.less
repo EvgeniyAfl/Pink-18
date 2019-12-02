@@ -1,14 +1,13 @@
 .offers-list {
   position: relative;
+  width: 280px;
   display: flex;
   flex-direction: column;
 
   list-style: none;
 
-  .indent-clear();
+  margin: 0 auto;
   padding-top: 90px;
-
-  background-color: @color-gray;
 }
 
 .offers-list__slogan {
@@ -42,43 +41,33 @@
   display: none;
 }
 
-.offers-list__triangle-bg {
-  position: absolute;
-  top: -50px;
-  left: 0;
-}
-
 @media (min-width: @tablet-width) {
   .offers-list {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 320px;
-    height: 420px;
+    width: 310px;
+    min-height: 420px;
 
-    margin-bottom: 95px;
-    padding-left: 320px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
   }
 
-  .offers-list::after {
-    position: absolute;
-    content: "";
-    width: 270px;
-    height: 485px;
-    bottom: -3px;
-    left: 20px;
+  // .offers-list::after {
+  //   display: block;
+  //   position: absolute;
+  //   content: "";
+  //   width: 270px;
+  //   height: 485px;
+  //   bottom: -3px;
+  //   right: 20px;
 
-    background-image: url("../img/iphone-screen-3-tablet@1x.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-  }
-
-  .offers-list__triangle-bg {
-    position: absolute;
-    top: -20px;
-    left: 0;
-  }
+  //   background-image: url("../img/iphone-screen-3-tablet@1x.png");
+  //   background-position: 0 0;
+  //   background-repeat: no-repeat;
+  // }
 
   .offers-list__item {
     text-align: left;
@@ -106,7 +95,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     margin: 0 auto;
     padding: 0;
@@ -118,16 +107,13 @@
     display: none;
   }
 
-  .offers-list__triangle-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
   .offers-list__item {
     width: 245px;
-    margin: 0 60px;
+    margin: 0;
+  }
+
+  .offers-list__item:first-child {
+    margin: 0;
   }
 
   .offers-list__item:last-child {
