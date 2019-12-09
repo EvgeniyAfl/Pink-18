@@ -1,5 +1,6 @@
 .upload {
   width: 100%;
+  min-height: 756px;
 
   margin: 0 auto;
   margin-bottom: 40px;
@@ -16,9 +17,9 @@
 
 .photos__upload-info {
   display: block;
-  width: 200px;
+  width: 260px;
 
-  margin: 45px auto;
+  margin: 43px auto;
 
   color: @color-blue;
   font-size: 14px;
@@ -32,7 +33,7 @@
 .upload__image {
   padding: 0 20px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
 }
 
 .upload__image-tablet,
@@ -43,6 +44,9 @@
 @media (min-width: @tablet-width) {
   .upload {
     width: 100%;
+    min-height: 500px;
+
+    margin-bottom: 27px;
 
     background-color: @color-gray;
   }
@@ -60,6 +64,9 @@
   .photos__upload-info {
     width: 460px;
 
+    margin: 50px auto;
+    padding-bottom: 20px;
+
     font-size: 18px;
   }
 
@@ -70,7 +77,7 @@
     height: 520px;
 
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 
     border: none;
   }
@@ -79,13 +86,15 @@
     width: 300px;
 
     margin: 0;
-    margin-top: 60px;
+    margin-top: 52px;
     margin-left: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .upload {
+    margin-bottom: 90px;
+
     background: none;
   }
 
@@ -105,10 +114,22 @@
   .upload__image-desktop {
     display: block;
 
-    padding: 50px;
+    width: 300px;
+    height: 400px;
+
+    margin: 56px 80px;
+    margin-right: 86px;
   }
 
   .upload__editor {
     width: 410px;
+
+    margin: 0;
+    margin-top: 52px;
+  }
+
+  .photos__upload-info {
+    margin: 0 auto;
+    margin-bottom: 50px;
   }
 }

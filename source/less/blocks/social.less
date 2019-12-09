@@ -13,9 +13,12 @@
   list-style: none;
 }
 
-
 .social__button {
   position: relative;
+}
+
+.social__button:active {
+  opacity: 0.3;
 }
 
 .social__button::before {
@@ -24,19 +27,45 @@
   position: absolute;
   width: 40px;
   height: 40px;
-  top: -14px;
-  left: -17px;
+  top: -17px;
+  left: -18px;
 
-  border: 3px solid #eeeff0;
+  border: 3px solid @color-gray-icon;
   border-radius: 50%;
+}
+
+.social__button--twitter::before {
+  left: -13px;
+}
+
+.social__button:hover::before {
+  border-color: @color-blue;
+}
+
+.social__button:active::before {
+  border-color: @color-gray-icon;
 }
 
 @media (min-width: @tablet-width) {
   .social {
+    display: block;
+
+    width: 170px;
+
     .indent-clear();
   }
 
   .social__list {
     .indent-clear();
+  }
+
+  .social__button--twitter::before {
+    left: -13px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    width: 145px;
   }
 }

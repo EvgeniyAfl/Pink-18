@@ -4,6 +4,8 @@
 }
 
 .list-photo__item {
+  display: block;
+
   color: #283645;
   font-size: 14px;
   font-weight: bold;
@@ -12,6 +14,7 @@
 
   margin: 0 20px;
   margin-bottom: 20px;
+  padding-bottom: 20px;
 
   background-color: #f2f2f2;
 }
@@ -19,6 +22,7 @@
 .main__wrapper {
   display: inline-block;
   width: 280px;
+  height: 193px;
 
   margin: 0 auto;
 
@@ -31,10 +35,11 @@
 }
 
 .main__name {
+  font-size: 14px;
   font-weight: bold;
 
   padding-left: 20px;
-  padding-top: 25px;
+  padding-top: 18px;
   margin: 0;
 }
 
@@ -47,11 +52,13 @@
   font-weight: normal;
 
   padding-left: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 11px;
   margin: 0;
 }
 
 .main__likes {
+  display: flex;
+
   color: @color-red;
   font-size: 12px;
   font-weight: normal;
@@ -61,6 +68,12 @@
   margin: 0;
 }
 
+.main__likes span {
+  display: block;
+
+  padding-left: 16px;
+}
+
 .main__user-info {
   .indent-clear();
 }
@@ -68,6 +81,8 @@
 .main__btn {
   border: none;
   background: transparent;
+
+  .indent-clear();
 }
 
 .main__photo {
@@ -87,25 +102,32 @@
 }
 
 .list-photo__info {
-  padding-left: 20px;
-  padding-bottom: 20px;
   margin: 0;
-  min-height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
 
   font-weight: normal;
 }
 
 .list-photo__likes {
-  padding-left: 20px;
-  padding-bottom: 28px;
+  display: flex;
+
   margin: 0;
+  padding-left: 18px;
 
   color: #d22856;
   font-size: 12px;
   font-weight: normal;
 }
 
+.list-photo__likes span {
+  padding-left: 18px;
+}
+
 .list-photo__btn {
+  .indent-clear();
+
   border: none;
   background-color: transparent;
 }
@@ -116,9 +138,11 @@
 }
 
 .list-photo__name {
-  padding-left: 20px;
-  padding-top: 25px;
   margin: 0;
+  padding-left: 20px;
+  padding-top: 10px;
+
+  font-size: 14px;
 }
 
 .photos__main {
@@ -128,7 +152,18 @@
   margin-bottom: 20px;
 }
 
+@media (max-width: @mobile-width-only) {
+  .list-photo__picture--tablet,
+  .list-photo__picture--desktop {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .photos__main {
+    margin-bottom: 47px;
+  }
+
   .photos__info {
     display: none;
   }
@@ -139,12 +174,83 @@
     flex-wrap: wrap;
   }
 
+  .list-photo__picture {
+    display: none;
+  }
+
+  .list-photo__picture--tablet {
+    display: block;
+  }
+  .list-photo__picture--desktop {
+    display: none;
+  }
+
   .main__wrapper {
     width: 620px;
+    height: 123px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main__name {
+    display: block;
+
+    margin-top: 24px;
+    margin-left: 27px;
+    padding: 0;
+
+    width: 200px;
+    height: 25px;
+
+    order: 1;
+  }
+
+  .main__likes {
+    display: flex;
+    justify-content: space-between;
+
+    width: 140px;
+    height: 25px;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+    padding-right: 25px;
+
+    order: 2;
   }
 
   .main__main-picture {
     display: none;
+  }
+
+  .main__info {
+    display: block;
+
+    width: 500px;
+
+    margin-top: -27px;
+    margin-left: 27px;
+    padding: 0;
+
+    order: 3;
+  }
+
+  .main__btn {
+    display: block;
+
+    padding-right: 5px;
+
+    order: 2;
+  }
+
+  .main__likes span {
+    display: block;
+
+    order: 1;
   }
 
   .list-photo__item {
@@ -168,6 +274,42 @@
     margin: 0 auto;
     margin-bottom: 50px;
   }
+
+  .list-photo__likes {
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 27px;
+    padding-left: 27px;
+  }
+
+  .list-photo__likes span {
+    display: block;
+
+    padding: 0;
+
+    order: 1;
+  }
+
+  .list-photo__btn {
+    display: block;
+
+    order: 2;
+  }
+
+  .list-photo__name {
+    padding-top: 25px;
+    padding-left: 27px;
+  }
+
+  .list-photo__info {
+    display: block;
+    min-height: 60px;
+
+    padding: 0;
+    padding-left: 27px;
+    padding-right: 27px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -177,6 +319,11 @@
 
   .main__wrapper {
     width: 940px;
+    height: 96px;
+  }
+
+  .main__info {
+    width: 100%;
   }
 
   .list-photo {
@@ -185,14 +332,30 @@
     margin: 0 auto;
   }
 
+  .list-photo__btn {
+    order: 2;
+  }
+
+  .list-photo__likes span {
+    order: 1;
+  }
+
   .list-photo__item {
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 57px;
   }
 
   .list-photo__item:nth-child(2n) {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .list-photo__picture--tablet {
+    display: none;
+  }
+
+  .list-photo__picture--desktop {
+    display: block;
   }
 }

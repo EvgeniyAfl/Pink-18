@@ -1,6 +1,6 @@
 
 .page-footer__wrapper {
-  width: 320px;
+  width: 280px;
 
   margin: 0 auto;
   padding: 0;
@@ -17,33 +17,63 @@
   .indent-clear();
 
   background-image: url("../img/bg-map-mobile@1x.png");
-  background-position: 0 -46px;
+  background-position: 0 -77px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .page-footer__nav {
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 
 .page-footer__main-wrapper {
   display: none;
 }
 
+.page-footer__logo {
+  &:hover {
+    path {
+      fill: @color-red;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo--desktop {
+  display: none;
+}
+
+.page-footer__homepage svg {
+  &:hover {
+    path {
+      fill: @color-red;
+    }
+  }
+
+  &:active {
+    path {
+      opacity: 0.7;
+    }
+  }
+}
+
 @media (min-width: @tablet-width) {
   .page-footer__wrapper {
     width: 620px;
-    height: 120px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
+    padding-bottom: 50px;
   }
 
   .page-footer__nav-wrapper {
-    min-height: 715px;
+    min-height: 730px;
 
     background-image: url("../img/bg-map-tablet@1x.jpg");
     background-position: 0 37px;
@@ -53,8 +83,12 @@
     margin-bottom: 35px;
   }
 
+  .page-footer__logo--desktop {
+    display: none;
+  }
+
   .page-footer__main-wrapper {
-    width: 660px;
+    width: 620px;
     height: 120px;
 
     display: flex;
@@ -62,10 +96,14 @@
     align-items: baseline;
 
     margin: 0 auto;
-    padding: 0;
+    padding: 0 20px;
   }
 
   .page-footer__nav {
+    display: block;
+
+    width: 150px;
+
     .indent-clear();
   }
 }
@@ -75,21 +113,32 @@
     width: 940px;
 
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
+    padding-bottom: 50px;
   }
 
   .page-footer__nav-wrapper {
-    min-height: 790px;
+    min-height: 800px;
 
     background-image: url("../img/bg-map-desktop@1x.jpg");
-    background-position: 0 65px;
+    background-position: 0 30px;
     background-repeat: no-repeat;
 
-    margin-bottom: 35px;
+    margin-bottom: 70px;
   }
 
   .page-footer__main-wrapper {
-    width: 960px;
+    width: 940px;
     height: 120px;
+
+    padding: 0;
+  }
+
+  .page-footer__logo {
+    display: none;
+  }
+
+  .page-footer__logo--desktop {
+    display: block;
   }
 }

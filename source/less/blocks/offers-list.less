@@ -7,12 +7,12 @@
   list-style: none;
 
   margin: 0 auto;
-  padding-top: 90px;
+  padding-top: 20px;
 }
 
 .offers-list__slogan {
   .indent-clear();
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   font-size: 18px;
   font-weight: bold;
@@ -20,12 +20,18 @@
 }
 
 .offers-list__intro {
-  .indent-clear();
+  margin: 0;
   margin-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   font-size: 14px;
   font-weight: normal;
   line-height: 24px;
+}
+
+.offers-list__intro br {
+  display: none;
 }
 
 .offers-list__item {
@@ -55,35 +61,27 @@
     padding: 0;
   }
 
-  // .offers-list::after {
-  //   display: block;
-  //   position: absolute;
-  //   content: "";
-  //   width: 270px;
-  //   height: 485px;
-  //   bottom: -3px;
-  //   right: 20px;
-
-  //   background-image: url("../img/iphone-screen-3-tablet@1x.png");
-  //   background-position: 0 0;
-  //   background-repeat: no-repeat;
-  // }
-
   .offers-list__item {
     text-align: left;
   }
 
   .offers-list__item:first-child {
     .indent-clear();
-    margin-top: 60px;
+    margin-top: 80px;
   }
 
   .offers-list__photo {
     display: none;
   }
 
-  .slider__feedback-description {
-    margin-bottom: 45px;
+  .offers-list__intro {
+    margin-bottom: 43px;
+    padding: 0;
+    padding-right: 10px;
+  }
+
+  .offers-list__intro br {
+    display: block;
   }
 }
 
@@ -99,7 +97,6 @@
 
     margin: 0 auto;
     padding: 0;
-    padding-top: 50px;
     z-index: 1;
   }
 
@@ -108,7 +105,7 @@
   }
 
   .offers-list__item {
-    width: 245px;
+    width: 300px;
     margin: 0;
   }
 
@@ -117,24 +114,32 @@
   }
 
   .offers-list__item:last-child {
-    display: none;
+    display: block;
   }
 
   .slider__feedback-description {
-    margin-bottom: 45px;
+    display: block;
+
+    margin-bottom: 36px;
+
+    font-size: 18px;
+    line-height: 30px;
   }
 
   .offers-list__photo--desktop {
     display: block;
+    height: 300px;
 
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 45px;
   }
 
   .offers-list__slogan {
     display: block;
+    width: 220px;
 
     margin: 0 auto;
+    margin-bottom: 15px;
     padding: 10px;
 
     color: @color-black;
@@ -148,12 +153,16 @@
     display: block;
 
     margin: 0 auto;
-    padding: 0;
+    padding: 0 36px;
 
     color: @color-blue;
     font-size: 18px;
     font-weight: normal;
     line-height: 30px;
     text-align: center;
+  }
+
+  .offers-list__intro br {
+    display: none;
   }
 }

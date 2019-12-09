@@ -6,12 +6,12 @@
   position: relative;
 
   width: 100%;
-  height: 400px;
+  height: 396px;
 
   margin: 0 auto;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 0 -55px;
+  background-position: 0 -41px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -35,7 +35,7 @@
 
   margin: 0 auto;
   padding: 0;
-  padding-top: 30px;
+  padding-top: 23px;
 
   text-align: center;
   color: @color-white;
@@ -53,8 +53,9 @@
     padding: 0 20px;
 
     background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: -110px 18px;
+    background-position: -18px 73px;
     background-repeat: no-repeat;
+    background-size: 695px 545px;
   }
 
   .main-photo {
@@ -62,10 +63,12 @@
     display: flex;
     width: 100%;
     height: 620px;
+
     margin: 0 auto;
+    margin-bottom: 50px;
 
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: 0 0;
+    background-position: -267px -111px;
     background-repeat: no-repeat;
   }
 
@@ -87,8 +90,8 @@
   .main-photo__info {
     width: 200px;
 
-    margin-top: 100px;
-    margin-left: 55px;
+    margin-top: 68px;
+    margin-left: 50px;
 
     font-size: 40px;
     line-height: 50px;
@@ -97,24 +100,29 @@
 
 @media (min-width: @desktop-width) {
   .main-photo__wrapper {
+    display: flex;
     width: 940px;
-    height: 100%;
 
     margin: 0 auto;
     padding: 0 10px;
-  }
-
-  .main-photo__wrapper::after {
-    display: block;
-    width: 555px;
-    height: 650px;
-    top: 100px;
-    right: 180px;
 
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: -329px 0;
+    background-position: 23px 99px;
     background-repeat: no-repeat;
+    background-size: 1063px 645px;
   }
+
+  // .main-photo__wrapper::after {
+  //   display: block;
+  //   width: 555px;
+  //   height: 650px;
+  //   top: 100px;
+  //   right: 180px;
+
+  //   background-image: url("../img/iphone-hand-desktop@1x.png");
+  //   background-position: -329px 0;
+  //   background-repeat: no-repeat;
+  // }
 
   .main-photo__picture {
     display: none;
@@ -122,19 +130,32 @@
 
   .main-photo__picture--desktop {
     display: block;
-    position: absolute;
-    width: 800px;
-    height: 550px;
+    width: 700px;
+    height: 600px;
 
-    bottom: 0;
-    left: 150px;
+    margin: 0;
+    padding: 0;
   }
 
   .main-photo {
-    height: 750px;
+    height: 735px;
+
+    margin-bottom: 65px;
 
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: 0 0;
+    background-position: -682px -109px;
     background-repeat: no-repeat;
+  }
+
+  .main-photo__info {
+    display: block;
+    width: 250px;
+
+    margin-top: 110px;
+    margin-left: 15px;
+    padding: 0;
+
+    font-size: 50px;
+    line-height: 60px;
   }
 }
