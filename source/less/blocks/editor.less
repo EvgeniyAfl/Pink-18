@@ -8,12 +8,20 @@
   margin: 0 auto;
   padding: 0;
 
-  width: 280px;
+  width: 260px;
+}
+
+.editor__button {
+  display: block;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 @media (max-width: @mobile-width-only) {
   .editor__wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 33px;
   }
 
   .editor__wrapper-toggles {
@@ -32,7 +40,7 @@
 
   margin: 0 auto;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   width: 280px;
 }
@@ -47,8 +55,45 @@
   border-radius: 50px;
   background-color: @color-gray;
 
-  margin-bottom: 15px;
-  padding: 17px;
+  margin-bottom: 13px;
+  padding: 15px;
+
+  cursor: pointer;
+
+  &:hover {
+    color: @color-white;
+
+    background-color: @color-red;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.editor__toggle--cancel {
+  color: @color-blue;
+
+  border-color: @color-blue;
+  background-color: transparent;
+
+  opacity: 0.1;
+
+  &:hover {
+    color: @color-blue;
+
+    background: transparent;
+
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: @color-white;
+
+    background-color: @color-blue;
+
+    opacity: 0.3;
+  }
 }
 
 .editor__tool--balance {
@@ -61,7 +106,7 @@
   width: 240px;
   height: 2px;
 
-  margin-top: 40px;
+  margin-top: 33px;
 
   background-color: @color-black;
 }
@@ -69,15 +114,19 @@
 .editor__tool--circle {
   display: block;
   position: absolute;
-  top: 85px;
+  top: 80px;
 
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
 
-  border: 3px solid @color-red;
+  border: 2px solid @color-red;
   border-radius: 50px;
   background-color: @color-gray;
   cursor: pointer;
+
+  &:active {
+    background-color: @color-red;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
@@ -98,7 +147,6 @@
   .editor__toggles {
     width: 260px;
 
-    margin-top: 100px;
     padding: 0;
   }
 
@@ -112,6 +160,9 @@
 
     width: 280px;
     height: 50px;
+
+    margin-bottom: 10px;
+    padding-bottom: 8px;
 
     border-bottom: 1px solid @color-gray-dark;
   }
@@ -136,15 +187,15 @@
   }
 
   .editor__tool--balance .editor__tool--circle {
-    left: 160px;
+    left: 165px;
   }
 
   .editor__tool--color .editor__tool--circle {
-    right: 40px;
+    left: 95px;
   }
 
   .editor__tool--cut .editor__tool--circle {
-    left: 100px;
+    right: 50px;
   }
 
   .editor__tool--range-black {
@@ -154,11 +205,13 @@
   }
 
   .editor__tool--circle {
-    top: 16px;
+    top: 18px;
   }
 
   .editor__wrapper {
     width: 100%;
+
+    margin-bottom: 62px;
   }
 }
 
@@ -167,7 +220,7 @@
     display: flex;
     justify-content: space-between;
 
-    margin-top: 200px;
+    margin-top: 135px;
   }
 
   .editor__toggle {
@@ -183,17 +236,52 @@
     padding: 0;
   }
 
+  .editor__button {
+    margin: 0;
+    padding: 0;
+  }
+
   .editor__wrapper {
     justify-content: flex-start;
+  }
+
+  .editor__wrapper svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .editor__tool {
+    margin-right: 15px;
   }
 
   .editor__tool--range-black {
     width: 290px;
   }
 
+  .editor__tool--circle {
+    left: 167px;
+  }
+
   .editor__tool--cut,
   .editor__tool--color,
   .editor__tool--balance {
+    justify-content: space-between;
+
     width: 100%;
+
+    margin-bottom: 13px;
+  }
+
+  .editor__tool--balance svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .editor__tool--color .editor__tool--circle {
+    left: 343px;
+  }
+
+  .editor__tool--balance .editor__tool--circle {
+    left: 256px;
   }
 }

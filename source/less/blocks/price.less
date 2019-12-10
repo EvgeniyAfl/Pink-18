@@ -10,18 +10,43 @@
 .price__total-list {
   color: @color-white;
   line-height: 30px;
-  .indent-clear();
-  list-style: none;
 
+  .indent-clear();
+
+  list-style: none;
   background-color: @color-blue;
 }
 
+.price__total-item:first-child {
+  position: relative;
+}
+
 .price__total-flag {
+  position: absolute;
+  top: 0;
+  left: 22px;
+
+  width: 70px;
+  height: 70px;
+}
+
+.price__total-hit-flag {
+  position: absolute;
+  top: 10px;
+  left: 35px;
+
   font-size: 14px;
-  font-weight: normal;
+  line-height: 30px;
+  transform: rotate(-45deg);
+  z-index: 1;
 }
 
 .price__total-title {
+  display: block;
+
+  margin: 0;
+  padding-top: 17px;
+
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -32,7 +57,8 @@
   font-weight: lighter;
   text-align: center;
 
-  padding-bottom: 25px;
+  padding-top: 2px;
+  padding-bottom: 19px;
 }
 
 .price__toggles {
@@ -48,14 +74,72 @@
   padding: 0;
 }
 
+.price__toggle {
+  position: relative;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: -4px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: @color-gray-dark;
+    border-radius: 50%;
+  }
+
+  &:hover::after {
+    background-color: @color-slider-hover;
+  }
+
+  &:active::after {
+    background-color: @color-slider-down;
+  }
+}
+
+.price__toggle--active::after {
+  background: transparent;
+}
+
+.price__toggle--active:hover::after,
+.price__toggle--active:active::after {
+  background: transparent;
+}
+
+.price__toggle--active::before {
+  content: "";
+
+  position: absolute;
+  top: 4px;
+  left: -6px;
+
+  width: 6px;
+  height: 6px;
+
+  border: 3px solid @color-blue;
+  border-radius: 50%;
+  z-index: 1;
+}
+
 .price__wrapper {
   display: block;
   position: relative;
 
+  height: 338px;
+
   background-color: @color-gray;
 
   margin: 0;
-  padding-top: 95px;
+  margin-bottom: 40px;
+  padding-top: 92px;
   padding-bottom: 45px;
 }
 
@@ -107,7 +191,7 @@
   border: 2px solid @color-gray;
   width: 161px;
 
-  padding-top: 10px;
+  padding-top: 17px;
   padding-left: 18px;
   padding-right: 18px;
 
@@ -131,7 +215,10 @@
 
 @media (min-width: @tablet-width) {
   .price {
+    position: relative;
     width: 100%;
+
+    margin-bottom: 50px;
   }
 
   .price__wrapper {
@@ -143,7 +230,7 @@
     position: relative;
 
     width: 100%;
-    min-height: 330px;
+    min-height: 290px;
 
     padding-top: 90px;
 
@@ -156,10 +243,28 @@
     width: 100%;
     top: -21px;
     left: 0;
+
+    z-index: 1;
   }
 
   .table {
     display: block;
+  }
+
+  .table__title {
+    width: 120px;
+
+    padding: 0;
+    padding-top: 2px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .table__title--bg-blue {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: 5px;
   }
 
   .price__triangle {
@@ -172,6 +277,12 @@
 
 @media (min-width: @desktop-width) {
   .price {
+    position: relative;
+
+    height: 525px;
+
+    margin-bottom: 67px;
+
     background-color: @color-gray;
   }
 
@@ -186,8 +297,9 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: -10px;
+    top: -2px;
     left: 0;
+    z-index: 1;
   }
 
   .table {
@@ -199,6 +311,8 @@
 
     font-size: 18px;
     line-height: 30px;
+
+    padding: 12px 27px;
   }
 
   .table__description {
@@ -206,10 +320,20 @@
     line-height: 30px;
   }
 
+  .table__title svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .table__title--bg-blue {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   .table__price {
     display: block;
 
-    padding-bottom: 20px;
+    padding-bottom: 5px;
 
     font-size: 24px;
   }
@@ -226,6 +350,6 @@
 
     margin: 0 auto;
     padding: 0 10px;
-    padding-top: 90px;
+    padding-top: 148px;
   }
 }

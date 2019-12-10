@@ -22,10 +22,24 @@
 
 .copyright__site svg {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: -8px;
-  left: 94px;
+  top: -6px;
+  left: 104px;
+
+  width: 26px;
+  height: 35px;
+}
+
+.copyright__icon,
+.copyright__site svg {
+  &:hover {
+    path {
+      fill: @color-blue;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -37,5 +51,36 @@
 
   .copyright {
     .indent-clear();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__wrapper {
+    display: block;
+
+    width: 150px;
+  }
+
+  .copyright__author {
+    display: block;
+
+    padding-right: 50px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .copyright {
+    display: block;
+    width: 140px;
+  }
+
+  .copyright__site {
+    margin-left: 20px;
+  }
+
+  .copyright__site svg {
+    top: -10px;
+    left: 123px;
   }
 }
