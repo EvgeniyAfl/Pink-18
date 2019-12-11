@@ -7,6 +7,12 @@
   display: none;
 }
 
+@media (max-width: @mobile-width-only) {
+  .price__table-wrapper {
+    display: none;
+  }
+}
+
 .price__total-list {
   color: @color-white;
   line-height: 30px;
@@ -148,7 +154,7 @@
   position: absolute;
   width: 100%;
 
-  top: -35px;
+  top: 0;
   left: 0;
 }
 
@@ -266,13 +272,6 @@
 
     border-radius: 5px;
   }
-
-  .price__triangle {
-    width: 660px;
-
-    top: -21px;
-    left: 0;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -284,13 +283,6 @@
     margin-bottom: 67px;
 
     background-color: @color-gray;
-  }
-
-  .price__triangle {
-    width: 1200px;
-
-    top: 0;
-    left: 0;
   }
 
   .price__triangle-table {
@@ -345,7 +337,6 @@
   .price__table-wrapper {
     position: relative;
 
-    width: 940px;
     min-height: 330px;
 
     margin: 0 auto;

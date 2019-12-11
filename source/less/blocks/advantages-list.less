@@ -28,7 +28,7 @@
   display: block;
   width: 100%;
   position: absolute;
-  top: -35px;
+  top: 0;
   left: 0;
 }
 
@@ -113,8 +113,10 @@
   .advantages__triangle-bg {
     display: block;
     position: absolute;
+
     width: 100%;
-    top: -21px;
+
+    top: 0;
     left: 0;
   }
 
@@ -131,7 +133,7 @@
     flex-direction: row;
 
     width: 620px;
-    height: 385px;
+    height: 350px;
 
     margin: 0 auto;
     padding: 0 20px;
@@ -141,6 +143,24 @@
 
   .advantages__add-clock {
     width: 300px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .advantages__add-clock::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 218px;
+    height: 218px;
+
+    top: 72px;
+    left: 45px;
+
+    border: 15px solid @color-red;
+    border-radius: 50%;
   }
 
   .add {
@@ -186,24 +206,10 @@
     text-decoration: underline;
   }
 
-  .advantages__add-wrapper::after {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 175px;
-    height: 175px;
-
-    top: 59px;
-    left: 38px;
-
-    border: 15px solid @color-red;
-    border-radius: 50%;
-  }
-
   .advantages__add-time {
     position: absolute;
-    top: 82px;
-    left: 86px;
+    top: 113px;
+    left: 113px;
 
     color: @color-red;
     font-size: 96px;
@@ -292,7 +298,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: -10px;
+    top: 0;
     left: 0;
     z-index: 0;
   }
@@ -334,8 +340,8 @@
   }
 
   .advantages__add-time {
-    top: 100px;
-    left: 100px;
+    top: 95px;
+    left: 95px;
 
     color: @color-red;
     font-size: 120px;
@@ -349,5 +355,13 @@
 
   .add__info br:last-child {
     display: none;
+  }
+
+  .advantages__add-clock::after {
+    top: 71px;
+    left: 35px;
+
+    border: 15px solid @color-red;
+    border-radius: 50%;
   }
 }

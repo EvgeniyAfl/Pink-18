@@ -1,9 +1,3 @@
-.photos {
-  width: 320px;
-
-  margin: 0 auto;
-}
-
 .main-nav__wrapper {
   width: 100%;
 
@@ -21,17 +15,21 @@
   .indent-clear();
 }
 
-.main-nav__logo-picture,
-.main-nav__logo {
+.main-nav__logo-picture {
   &:hover {
     path {
-      fill: @color-red;
+    fill: @color-red;
     }
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.main-nav__logo-picture--tablet,
+.main-nav__logo-picture--desktop {
+  display: none;
 }
 
 .main-nav__logo {
@@ -41,6 +39,7 @@
 .main-nav__navigation {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 
   .indent-clear();
   padding: 20px;
@@ -49,13 +48,15 @@
 }
 
 .main-nav__togle {
+  display: block;
+
+  width: 25px;
+  height: 25px;
+
+  .indent-clear();
+
   background-color: transparent;
   border: none;
-}
-
-.logo--tablet,
-.logo--desktop {
-  display: none;
 }
 
 .site-list__item a {
@@ -90,8 +91,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .photos {
-    width: 660px;
+  .main-nav__logo-picture--mobile {
+    display: none;
+  }
+
+  .main-nav__logo-picture {
+    width: 146px;
+    height: 40px;
   }
 
   .main-nav {
@@ -118,12 +124,7 @@
     padding: 0;
   }
 
-  .logo--mobile,
-  .logo--desktop {
-    display: none;
-  }
-
-  .logo--tablet {
+  .main-nav__logo-picture--tablet {
     display: block;
   }
 
@@ -133,10 +134,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .photos {
-    width: 100%;
-  }
-
   .site-list {
     min-width: 618px;
     display: flex;
@@ -191,9 +188,17 @@
     width: 100%;
     min-height: 110px;
 
+    margin: 0 auto;
+
     background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: -682px 0;
+    background-position: center 0;
     background-repeat: no-repeat;
+    background-color: transparent;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 2600px auto;
+    }
   }
 
   .main-nav__wrapper {
@@ -222,12 +227,11 @@
     display: none;
   }
 
-  .logo--mobile,
-  .logo--tablet {
+  .main-nav__logo-picture--tablet {
     display: none;
   }
 
-  .logo--desktop {
+  .main-nav__logo-picture--desktop {
     display: block;
   }
 }
