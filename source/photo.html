@@ -128,13 +128,8 @@
     </p>
     <section class="photos">
       <h2 class="visually-hidden">Фотографии пользователей</h2>
-      <p class="photos__info">
-          Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, как не хатает ваших?
-        </p>
-        <picture>
-            <img class="photos__picture" src="img/panorama-desktop@1x.jpg" srcset="img/panorama-desktop@2x.jpg" width="1200" height="512" alt="Панорама дня">
-            </picture>
+      <img class="photos__picture" src="img/panorama-desktop@1x.jpg" srcset="img/panorama-desktop@2x.jpg 2x"
+        width="1200" height="512" alt="Панорама дня">
       <div class="photos__wrapper">
         <div class="photos__main main">
           <div class="main__wrapper">
@@ -163,12 +158,14 @@
         </div>
         <ul class="photos__list list-photo">
           <li class="list-photo__item">
-            <img class="list-photo__picture" src="img/photo-car-mobile@1x.jpg" width="300" height="138"
-              alt="Фото машины">
-            <img class="list-photo__picture list-photo__picture--tablet" src="img/photo-car-tablet@1x.jpg" width="300"
-              height="138" alt="Фото машины">
-            <img class="list-photo__picture list-photo__picture--desktop" src="img/photo-car-desktop@1x.jpg" width="300"
-              height="138" alt="Фото машины">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="list-photo__picture" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x"
+                width="300" height="138" alt="Фото машины">
+            </picture>
             <h3 class="list-photo__name">Левон
               <b class="list-photo__time">(5 ЧАСОВ НАЗАД)</b>
             </h3>
@@ -189,12 +186,14 @@
             </p>
           </li>
           <li class="list-photo__item">
-            <img class="list-photo__picture" src="img/photo-drumset-mobile@1x.jpg" width="300" height="138"
-              alt="Ударный инструмент">
-            <img class="list-photo__picture list-photo__picture--tablet" src="img/photo-drumset-tablet@1x.jpg"
-              width="300" height="138" alt="Ударный инструмент">
-            <img class="list-photo__picture list-photo__picture--desktop" src="img/photo-drumset-desktop@1x.jpg"
-              width="300" height="138" alt="Ударный инструмент">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+              <img class="list-photo__picture" src="img/photo-drumset-mobile@1x.jpg"
+                srcset="img/photo-drumset-mobile@2x.jpg 2x" width="300" height="138" alt="Ударный инструмент">
+            </picture>
             <h3 class="list-photo__name">Антон
               <b class="list-photo__time">(12 ЧАСОВ НАЗАД)</b>
             </h3>
@@ -215,11 +214,14 @@
             </p>
           </li>
           <li class="list-photo__item">
-            <img class="list-photo__picture" src="img/photo-window-mobile@1x.jpg" width="300" height="138" alt="Окна">
-            <img class="list-photo__picture list-photo__picture--tablet" src="img/photo-window-tablet@1x.jpg"
-              width="300" height="138" alt="Окна">
-            <img class="list-photo__picture list-photo__picture--desktop" src="img/photo-window-desktop@1x.jpg"
-              width="300" height="138" alt="Окна">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+              <img class="list-photo__picture" src="img/photo-window-mobile@1x.jpg"
+                srcset="img/photo-window-mobile@2x.jpg 2x" width="300" height="138" alt="Окна">
+            </picture>
             <h3 class="list-photo__name">Борис
               <b class="list-photo__time">(20 ЧАСОВ НАЗАД)</b>
             </h3>
@@ -240,11 +242,14 @@
             </p>
           </li>
           <li class="list-photo__item">
-            <img class="list-photo__picture" src="img/photo-fair-mobile@1x.jpg" width="300" height="138" alt="Кубань">
-            <img class="list-photo__picture list-photo__picture--tablet" src="img/photo-fair-tablet@1x.jpg" width="300"
-              height="138" alt="Кубань">
-            <img class="list-photo__picture list-photo__picture--desktop" src="img/photo-fair-desktop@1x.jpg"
-              width="300" height="138" alt="Кубань">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+              <img class="list-photo__picture" src="img/photo-fair-mobile@1x.jpg"
+                srcset="img/photo-fair-mobile@2x.jpg 2x" width="300" height="138" alt="Кубань">
+            </picture>
             <h3 class="list-photo__name">Сергей
               <b class="list-photo__time">(25 ЧАСОВ НАЗАД)</b>
             </h3>
@@ -265,11 +270,14 @@
             </p>
           </li>
           <li class="list-photo__item">
-            <img class="list-photo__picture" src="img/photo-pov-mobile@1x.jpg" width="300" height="138" alt="Горы">
-            <img class="list-photo__picture list-photo__picture--tablet" src="img/photo-pov-tablet@1x.jpg" width="300"
-              height="138" alt="Горы">
-            <img class="list-photo__picture list-photo__picture--desktop" src="img/photo-pov-desktop@1x.jpg" width="300"
-              height="138" alt="Горы">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+              <img class="list-photo__picture" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x"
+                width="300" height="138" alt="Горы">
+            </picture>
             <h3 class="list-photo__name">Максим
               <b class="list-photo__time">(40 ЧАСОВ НАЗАД)</b>
             </h3>
@@ -290,12 +298,14 @@
             </p>
           </li>
           <li class="list-photo__item">
-            <img class="list-photo__picture" src="img/photo-wing-mobile@1x.jpg" width="300" height="138"
-              alt="В самолете">
-            <img class="list-photo__picture list-photo__picture--tablet" src="img/photo-wing-tablet@1x.jpg" width="300"
-              height="138" alt="В самолете">
-            <img class="list-photo__picture list-photo__picture--desktop" src="img/photo-wing-desktop@1x.jpg"
-              width="300" height="138" alt="В самолете">
+            <picture>
+              <source media="(min-width: 960px)"
+                srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)"
+                srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+              <img class="list-photo__picture" src="img/photo-wing-mobile@1x.jpg"
+                srcset="img/photo-wing-mobile@2x.jpg 2x" width="300" height="138" alt="В самолете">
+            </picture>
             <h3 class="list-photo__name">Надежда
               <b class="list-photo__time">(45 ЧАСОВ НАЗАД)</b>
             </h3>
@@ -326,11 +336,13 @@
       <h2 class="visually-hidden">Загрузка фото</h2>
 
       <div class="upload__wrapper">
-        <img class="upload__image" src="img/photo-road-mobile@1x.jpg" width="280" height="377" alt="Фото редактора">
-        <img class="upload__image-tablet" src="img/photo-road-tablet@1x.jpg" width="300" height="520"
-          alt="Фото редактора">
-        <img class="upload__image-desktop" src="img/photo-road-desktop@1x.jpg" width="300" height="350"
-          alt="Фото редактора">
+        <picture>
+          <source media="(min-width: 960px)"
+            srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+          <img class="upload__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x"
+            width="280" height="377" alt="Фото редактора">
+        </picture>
         <div class="upload__editor editor">
           <div class="editor__wrapper">
             <div class="editor__tool editor__tool--cut">
