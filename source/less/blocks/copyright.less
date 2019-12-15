@@ -13,20 +13,19 @@
 
   display: flex;
   justify-content: space-between;
-  justify-items: center;
+  align-items: center;
 }
 
 .copyright {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 150px;
 }
 
-.copyright__site svg {
-  position: absolute;
-  top: -6px;
-  left: 104px;
-
-  width: 26px;
-  height: 35px;
+.copyright__site {
+  display: block;
 }
 
 .copyright__icon,
@@ -62,25 +61,7 @@
   }
 
   .copyright__author {
-    display: block;
-
-    padding-right: 50px;
-
     font-size: 18px;
     line-height: 18px;
-  }
-
-  .copyright {
-    display: block;
-    width: 140px;
-  }
-
-  .copyright__site {
-    margin-left: 20px;
-  }
-
-  .copyright__site svg {
-    top: -10px;
-    left: 123px;
   }
 }

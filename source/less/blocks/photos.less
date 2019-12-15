@@ -1,0 +1,59 @@
+.photos__info {
+  display: block;
+  width: 240px;
+
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 49px;
+
+  color: #283645;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+  text-align: center;
+}
+
+.photos__main {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.photos__picture {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.photos__wrapper {
+  width: 320px;
+
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .photos__wrapper {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .photos__main {
+    margin-bottom: 47px;
+  }
+
+  .photos__info {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photos__wrapper {
+    width: 940px;
+  }
+
+  .photos__info {
+    display: none;
+  }
+}

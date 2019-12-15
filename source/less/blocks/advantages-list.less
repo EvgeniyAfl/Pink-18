@@ -7,12 +7,26 @@
 .advantages__wrapper {
   position: relative;
   width: 100%;
-  height: 765px;
+  height: 818px;
 
   margin: 0 auto;
   margin-bottom: 25px;
 
   background-color: @color-gray;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 95px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
 }
 
 .advantages__list {
@@ -20,7 +34,7 @@
   list-style: none;
 
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
   padding: 0;
 }
 
@@ -28,7 +42,7 @@
   display: block;
   width: 100%;
   position: absolute;
-  top: -35px;
+  top: 0;
   left: 0;
 }
 
@@ -70,7 +84,7 @@
   display: block;
 
   width: 160px;
-  height: 268px;
+  height: 278px;
 
   margin: 0 auto;
 }
@@ -87,7 +101,12 @@
     width: 620px;
 
     margin: 0 auto;
+    margin-bottom: 50px;
     padding: 0 20px;
+  }
+
+  .advantages__wrapper::after {
+    top: -20px;
   }
 
   .advantages__item {
@@ -107,21 +126,24 @@
 
   .advantages__list {
     width: 100%;
-    margin-bottom: 50px;
+
+    margin: 0;
   }
 
   .advantages__triangle-bg {
     display: block;
     position: absolute;
+
     width: 100%;
-    top: -21px;
+
+    top: 0;
     left: 0;
   }
 
   .advantages__wrapper {
     height: 486px;
 
-    margin-bottom: 50px;
+    margin-bottom: 57px;
   }
 
   .advantages__add-wrapper {
@@ -131,16 +153,36 @@
     flex-direction: row;
 
     width: 620px;
-    height: 385px;
+    height: 280px;
 
     margin: 0 auto;
+    margin-bottom: 95px;
     padding: 0 20px;
 
     background-color: @color-white;
   }
 
   .advantages__add-clock {
-    width: 300px;
+    width: 240px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 240px auto;
+  }
+
+  .advantages__add-clock::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 175px;
+    height: 175px;
+
+    top: 54px;
+    left: 38px;
+
+    border: 15px solid @color-red;
+    border-radius: 50%;
   }
 
   .add {
@@ -149,7 +191,7 @@
     flex-direction: column;
     width: 300px;
 
-    margin-top: 10px;
+    margin-top: 4px;
     padding: 0;
     padding-right: 10px;
   }
@@ -186,24 +228,10 @@
     text-decoration: underline;
   }
 
-  .advantages__add-wrapper::after {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 175px;
-    height: 175px;
-
-    top: 59px;
-    left: 38px;
-
-    border: 15px solid @color-red;
-    border-radius: 50%;
-  }
-
   .advantages__add-time {
     position: absolute;
-    top: 82px;
-    left: 86px;
+    top: 78px;
+    left: 89px;
 
     color: @color-red;
     font-size: 96px;
@@ -218,7 +246,7 @@
 
   .advantages__tablet-picture {
     display: block;
-    z-index: 0;
+    z-index: 2;
   }
 
   .advantages__mobile-picture {
@@ -228,7 +256,7 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
-    margin-bottom: 98px;
+    margin-bottom: 131px;
   }
 
   .advantages__wrapper {
@@ -248,7 +276,7 @@
 
   .add {
     display: block;
-    width: 565px;
+    width: 575px;
 
     margin: 0;
     padding: 0;
@@ -259,7 +287,7 @@
     line-height: 30px;
 
     margin-bottom: 30px;
-    padding-right: 10px;
+    padding-right: 30px;
   }
 
   .add__link {
@@ -278,6 +306,7 @@
 
   .advantages__add-wrapper {
     width: 940px;
+    height: 350px;
 
     margin: 0 auto;
     margin-bottom: 75px;
@@ -292,7 +321,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: -10px;
+    top: 0;
     left: 0;
     z-index: 0;
   }
@@ -305,12 +334,13 @@
     width: 960px;
 
     margin: 0 auto;
-    margin-bottom: 75px;
   }
 
   .advantages__list-wrapper {
     width: 960px;
 
+    margin: 0 auto;
+    margin-bottom: 70px;
     padding: 0 10px;
   }
 
@@ -334,8 +364,8 @@
   }
 
   .advantages__add-time {
-    top: 100px;
-    left: 100px;
+    top: 98px;
+    left: 93px;
 
     color: @color-red;
     font-size: 120px;
@@ -349,5 +379,30 @@
 
   .add__info br:last-child {
     display: none;
+  }
+
+  .advantages__add-clock::after {
+    width: 220px;
+    height: 220px;
+
+    top: 69px;
+    left: 35px;
+
+    border: 15px solid @color-red;
+    border-radius: 50%;
+  }
+
+  .advantages__add-clock {
+    width: 300px;
+
+    background-size: 300px auto;
+  }
+
+  .advantages__wrapper::after {
+    top: 0;
+
+    height: 150px;
+
+    background-size: cover;
   }
 }
