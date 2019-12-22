@@ -8,14 +8,15 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-body page-body--no-js">
 
   <header class="page-header">
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--open">
+      <!--для закрытия меню используется модификатор: main-nav--close -->
       <div class="main-nav__wrapper">
         <div class="main-nav__navigation">
           <a class="main-nav__logo" href="index.html">
-            <svg class="main-nav__logo-picture main-nav__logo-picture--mobile" version="1.0" id="Layer_1"
+            <svg class="main-nav__logo-picture main-nav__logo-picture--mobile" version="1.0"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859"
               xml:space="preserve">
@@ -30,9 +31,9 @@
                   d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z" />
               </g>
             </svg>
-            <svg class="main-nav__logo-picture main-nav__logo-picture--tablet" version="1.1" id="Layer_1"
+            <svg class="main-nav__logo-picture main-nav__logo-picture--tablet" version="1.1"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375"
+              width="150px" height="50px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375"
               xml:space="preserve">
               <g>
                 <path fill="#FFFFFF"
@@ -48,7 +49,7 @@
               <path fill="#FFFFFF"
                 d="M60.462,28.016c-0.002-0.009-5.175-21.365-5.175-21.365C54.926,4.303,52.694,0,46.688,0 c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5c4.856,0,5.575,3.729,5.639,4.143l4.767,19.701h-2.073 c-0.742-5.927-5.802-10.531-11.927-10.531s-11.186,4.604-11.927,10.531h-1.82c-0.741-5.927-5.802-10.531-11.927-10.531 S6.235,20.917,5.493,26.844H3.42L8.187,7.143C8.25,6.729,8.97,3,13.826,3c0.829,0,1.5-0.671,1.5-1.5S14.655,0,13.826,0 C7.82,0,5.588,4.303,5.227,6.651c0,0-5.173,21.356-5.175,21.365c-0.266,1.109,0.531,1.826,1.426,1.826 c0.012,0,0.023,0.004,0.036,0.004h3.982c0.741,5.926,5.802,10.53,11.927,10.53s11.185-4.604,11.927-10.53h1.814 c0.742,5.926,5.802,10.53,11.927,10.53s11.186-4.604,11.927-10.53H59c0.012,0,0.023-0.004,0.036-0.004 C59.931,29.842,60.728,29.125,60.462,28.016z M26.315,29.844c-0.715,4.272-4.421,7.531-8.896,7.531c-4.475,0-8.18-3.259-8.896-7.531 c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.715-4.271,4.421-7.531,8.896-7.531c4.475,0,8.18,3.26,8.896,7.531 c0.082,0.489,0.135,0.988,0.135,1.5S26.397,29.355,26.315,29.844z M51.99,29.844c-0.716,4.272-4.421,7.531-8.896,7.531 c-4.475,0-8.181-3.259-8.896-7.531c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.716-4.271,4.421-7.531,8.896-7.531 c4.475,0,8.181,3.26,8.896,7.531c0.082,0.489,0.135,0.988,0.135,1.5S52.072,29.355,51.99,29.844z" />
             </svg>
-            <svg class="main-nav__logo-picture main-nav__logo-picture--desktop" version="1.1" id="Layer_2"
+            <svg class="main-nav__logo-picture main-nav__logo-picture--desktop" version="1.1"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375"
               xml:space="preserve">
@@ -91,7 +92,8 @@
             </svg>
           </a>
           <button class="main-nav__togle" type="button" aria-label="open-menu">
-            <img class="main-nav__togle-icon" src="img/icon-menu-cross.svg" width="24" height="24" alt="Закрыть меню">
+            <img class="main-nav__open" src="img/icon-menu-cross.svg" width="24" height="24" alt="Закрыть меню">
+            <img class="main-nav__close" src="img/icon-menu-burger.svg" width="50" height="33" alt="Открыть меню">
           </button>
         </div>
         <ul class="main-nav__list site-list">
@@ -117,33 +119,33 @@
       <div class="main-photo__container">
         <div class="main-photo__wrapper">
           <h1 class="main-photo__info">Взгляните на жизнь<br> иначе!</h1>
-          <div class="main-photo__picture main-photo__picture--mobile"></div>
-        </div>
-        <div class="main-photo__apps-wrapper">
-          <h2 class="visually-hidden">Скачать приложение</h2>
-          <ul class="main-photo__list">
-            <li class="main-photo__item">
-              <a class="main-photo__btn" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
-            </li>
-            <li class="main-photo__item">
-              <a class="main-photo__icon-dowload" href="https://www.apple.com/ru/ios/app-store/">
-                <img src="img/logo-apple.svg" width="46" height="56" alt="Apple">
-              </a>
-            </li>
-            <li class="main-photo__item">
-              <a class="main-photo__icon-dowload" href="https://play.google.com/store/apps?hl=ru">
-                <img src="img/logo-android.svg" width="48" height="45" alt="Android">
-              </a>
-            </li>
-            <li class="main-photo__item">
-              <a class="main-photo__icon-dowload" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
-                <img src="img/logo-microsoft.svg" width="46" height="46" alt="Microsoft">
-              </a>
-            </li>
-            <li class="main-photo__item">
-              <p class="main-photo__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-            </li>
-          </ul>
+          <div class="main-photo__apps-wrapper">
+            <h2 class="visually-hidden">Скачать приложение</h2>
+            <ul class="main-photo__list">
+              <li class="main-photo__item">
+                <a class="main-photo__btn" href="https://www.apple.com/ru/ios/app-store/">Скачать приложение</a>
+              </li>
+              <li class="main-photo__item">
+                <a class="main-photo__icon-dowload" href="https://www.apple.com/ru/ios/app-store/">
+                  <img src="img/logo-apple.svg" width="46" height="56" alt="Apple">
+                </a>
+              </li>
+              <li class="main-photo__item">
+                <a class="main-photo__icon-dowload" href="https://play.google.com/store/apps?hl=ru">
+                  <img src="img/logo-android.svg" width="48" height="45" alt="Android">
+                </a>
+              </li>
+              <li class="main-photo__item">
+                <a class="main-photo__icon-dowload" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
+                  <img src="img/logo-microsoft.svg" width="46" height="46" alt="Microsoft">
+                </a>
+              </li>
+              <li class="main-photo__item">
+                <p class="main-photo__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -162,44 +164,51 @@
       </div>
       <div class="advantages__wrapper">
         <div class="advantages__list-wrapper">
-          <img class="advantages__tablet-picture" src="img/iphone-screen-3-tablet@1x.png" srcset="img/iphone-screen-3-tablet@2x.png 2x" width="270px" height="480px"
-            alt="Скриншот">
+          <img class="advantages__tablet-picture" src="img/iphone-screen-3-tablet@1x.png"
+            srcset="img/iphone-screen-3-tablet@2x.png 2x" width="270px" height="480px" alt="Скриншот">
           <ul class="advantages__list offers-list">
             <li class="offers-list__item">
-              <img class="offers-list__photo offers-list__photo--desktop" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" width="300" height="300" alt="screen1">
+              <img class="offers-list__photo offers-list__photo--desktop" src="img/iphone-screen-1-desktop@1x.png"
+                srcset="img/iphone-screen-1-desktop@2x.png 2x" width="300" height="300" alt="screen1">
               <h3 class="offers-list__slogan">Поднимает настроение</h3>
               <p class="offers-list__intro">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
                 несколько кликов!</p>
             </li>
             <li class="offers-list__item">
-              <img class="offers-list__photo offers-list__photo--desktop" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" width="300" height="300" alt="screen2">
+              <img class="offers-list__photo offers-list__photo--desktop" src="img/iphone-screen-2-desktop@1x.png"
+                srcset="img/iphone-screen-2-desktop@2x.png 2x" width="300" height="300" alt="screen2">
               <h3 class="offers-list__slogan">Меняет мир вокруг</h3>
-              <p class="offers-list__intro">Сделайте снимок и украсте его смайликом или текстовой подписью, чтобы<br>
+              <p class="offers-list__intro">Сделайте снимок и<br> украсте его смайликом или текстовой подписью,
+                чтобы<br>
                 усилить эффект</p>
             </li>
             <li class="offers-list__item">
-              <img class="offers-list__photo offers-list__photo--desktop" src="img/iphone-screen-3-desktop@1x.png" srcset="img/iphone-screen-3-desktop@2x.png 2x" width="300" height="300" alt="screen3">
+              <img class="offers-list__photo offers-list__photo--desktop" src="img/iphone-screen-3-desktop@1x.png"
+                srcset="img/iphone-screen-3-desktop@2x.png 2x" width="300" height="300" alt="screen3">
               <h3 class="offers-list__slogan">Заводит новых друзей</h3>
               <p class="offers-list__intro">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
                 новых
               </p>
             </li>
             <li class="offers-list__item">
-                <img class="advantages__mobile-picture" src="img/iphone-screen-3-tablet@1x.png" srcset="img/iphone-screen-3-tablet@2x.png 2x" width="180px" height="250px" alt="Скриншот">
+              <img class="advantages__mobile-picture" src="img/iphone-screen-3-tablet@1x.png"
+                srcset="img/iphone-screen-3-tablet@2x.png 2x" width="180px" height="250px" alt="Скриншот">
             </li>
           </ul>
         </div>
       </div>
-      <div class="advantages__add-wrapper">
-        <div class="advantages__add-clock">
-          <b class="advantages__add-time">24</b>
-        </div>
-        <div class=" advantages__add add">
-          <h3 class="add__description">Эффект<br> на 24 часа!</h3>
-          <p class="add__info">Британские ученые провели исследования и доказали,<br>что положительный эффект<br> от
-            использования приложения
-            длится целые сутки!</p>
-          <a class="add__link" href="#">Узнать больше об исследовании</a>
+      <div class="advantages__container">
+        <div class="advantages__add-wrapper">
+          <div class="advantages__add-clock">
+            <b class="advantages__add-time">24</b>
+          </div>
+          <div class="advantages__add add">
+            <h3 class="add__description">Эффект<br> на 24 часа!</h3>
+            <p class="add__info">Британские ученые провели исследования и доказали,<br>что положительный эффект<br> от
+              использования приложения
+              длится целые сутки!</p>
+            <a class="add__link" href="#">Узнать больше об исследовании</a>
+          </div>
         </div>
       </div>
     </section>
@@ -474,7 +483,9 @@
           </li>
         </ul>
       </div>
-      <iframe class="page-footer__map" src="https://yandex.ru/map-widget/v1/-/CGhDzRkM" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
+      <iframe class="page-footer__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0a6b3840e4da3f261ec4417e55ca319f64752aca4243baca96312a46d1130ee4&amp;source=constructor"
+        width="1200" height="500" frameborder="0"></iframe>
     </div>
     <div class="page-footer__main-wrapper">
       <a class="page-footer__homepage" href="https://htmlacademy.ru/intensive/adaptive">
