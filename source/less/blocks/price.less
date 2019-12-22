@@ -72,7 +72,8 @@
 
 .price__toggles {
   display: flex;
-  width: 88px;
+  width: 75px;
+  height: 10px;
   bottom: 32px;
   left: 110px;
   align-items: center;
@@ -128,10 +129,10 @@
 
   position: absolute;
   top: 4px;
-  left: -6px;
+  left: -5px;
 
-  width: 6px;
-  height: 6px;
+  width: 12px;
+  height: 12px;
 
   border: 3px solid @color-blue;
   border-radius: 50%;
@@ -143,13 +144,12 @@
   position: relative;
 
   width: 100%;
-  height: 338px;
+  height: 470px;
 
   background-color: @color-gray;
 
   margin: 0;
   padding-top: 91px;
-  padding-bottom: 45px;
 
   &::after {
     position: absolute;
@@ -175,73 +175,12 @@
   left: 0;
 }
 
-.table {
-  display: none;
-  width: 620px;
-
-  margin: 0 auto;
-
-  text-align: center;
-  color: @color-white;
-
-  border-collapse: collapse;
-  border-radius: 3px;
-  background-color: @color-white;
-}
-
-.table__description {
-  color: @color-white;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 30px;
-  text-transform: uppercase;
-
-  .indent-clear();
-}
-
-.table__row {
-  border: 2px solid @color-gray;
-}
-
-.table__price {
-  color: @color-white;
-  font-size: 18px;
-  font-weight: lighter;
-  line-height: 30px;
-}
-
-.table__title {
-  border: 2px solid @color-gray;
-  width: 161px;
-
-  padding-top: 17px;
-  padding-left: 18px;
-  padding-right: 18px;
-
-  color: @color-blue;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 30px;
-}
-
-.table__title--bg-gray {
-  background-color: @color-gray;
-}
-
-.table__title--bg-blue {
-  background-color: @color-blue;
-}
-
-.table__title--left-align {
-  text-align: left;
-}
-
 @media (min-width: @tablet-width) {
   .price {
     position: relative;
     width: 100%;
 
-    margin-bottom: 50px;
+    margin-bottom: 46px;
   }
 
   .price__wrapper {
@@ -256,6 +195,7 @@
     min-height: 290px;
 
     padding-top: 79px;
+    padding-bottom: 65px;
 
     background-color: @color-gray;
 
@@ -284,63 +224,6 @@
 
     z-index: 1;
   }
-
-  .table {
-    display: block;
-  }
-
-  .table__title {
-    width: 130px;
-
-    padding: 0;
-    padding-top: 4px;
-    padding-left: 21px;
-    padding-right: 21px;
-  }
-
-  .table__title--bg-blue {
-    padding-top: 7px;
-    padding-bottom: 7px;
-
-    border-radius: 5px;
-  }
-
-  .table__title--bg-blue:nth-child(3) {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 60px;
-      height: 60px;
-
-      background-image: url("../img/bg-hit-tablet.svg");
-    }
-  }
-
-  .table__hit {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-
-    font-size: 14px;
-    line-height: 30px;
-
-    color: @color-white;
-    transform: rotate(-45deg);
-    z-index: 1;
-  }
-
-  .table__title--left-align {
-    padding-top: 0;
-  }
-
-  .table__title--bg-blue .table__description {
-    padding-top: 5px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -363,42 +246,6 @@
     z-index: 1;
   }
 
-  .table {
-    width: 940px;
-  }
-
-  .table__title {
-    width: 240px;
-
-    font-size: 18px;
-    line-height: 30px;
-
-    padding: 12px 15px;
-  }
-
-  .table__description {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  .table__title svg {
-    width: 27px;
-    height: 27px;
-  }
-
-  .table__title--bg-blue {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .table__price {
-    display: block;
-
-    padding-bottom: 5px;
-
-    font-size: 24px;
-  }
-
   .price__wrapper {
     display: none;
   }
@@ -414,9 +261,9 @@
   }
 
   .price__table-wrapper::after {
-    top: 0;
+    top: -43px;
 
-    height: 150px;
+    height: 12vw;
 
     background-size: cover;
   }

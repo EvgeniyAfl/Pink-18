@@ -1,3 +1,16 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 10;
+}
+
+.page-body--no-js .page-header {
+  position: static;
+}
+
 .main-nav__wrapper {
   width: 100%;
 
@@ -5,6 +18,10 @@
   padding: 0;
 
   background-color: @color-blue;
+}
+
+.main-nav--close .main-nav__wrapper {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .main-nav__list {
@@ -33,13 +50,16 @@
 }
 
 .main-nav__logo {
+  display: block;
+
+  padding: 0;
   cursor: pointer;
 }
 
 .main-nav__navigation {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 
   .indent-clear();
   padding: 20px;
@@ -48,15 +68,45 @@
 }
 
 .main-nav__togle {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 33px;
 
   .indent-clear();
 
   background-color: transparent;
   border: none;
+}
+
+.page-body--no-js .main-nav__togle {
+  display: none;
+}
+
+.main-nav__close {
+  width: 50px;
+  height: 33px;
+}
+
+@media (max-width: @mobile-tablet-width) {
+  .main-nav--close {
+    height: 64px;
+  }
+
+  .main-nav--close .site-list {
+    display: none;
+  }
+
+  .main-nav__navigation {
+    border: none;
+  }
+
+  .main-nav--close .main-nav__open,
+  .main-nav--open .main-nav__close {
+    display: none;
+  }
 }
 
 .site-list__item a {
@@ -91,13 +141,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav__logo-picture--mobile {
-    display: none;
-  }
-
   .main-nav__logo-picture {
-    width: 146px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
+
+    margin-left: 20px;
   }
 
   .main-nav {
@@ -105,27 +153,41 @@
 
     margin: 0;
     padding: 0;
+  }
 
-    background-color: @color-blue;
+  .main-nav__logo-picture--mobile {
+    display: none;
+  }
+
+  .main-nav__logo-picture--tablet {
+    display: block;
+  }
+
+  @media (max-width: @tablet-width-only) {
+    .main-nav--close {
+      height: 105px;
+
+      background-position: -281px -4px;
+      background-size: auto;
+    }
   }
 
   .main-nav__navigation {
-    height: 60px;
-
-    margin: 0;
-    padding: 25px 20px;
-  }
-
-  .main-nav__wrapper {
-    width: 100%;
-    min-height: 200px;
+    height: 110px;
 
     margin: 0;
     padding: 0;
   }
 
-  .main-nav__logo-picture--tablet {
-    display: block;
+  .main-nav__wrapper {
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav__open {
+    margin-right: 20px;
   }
 
   .user-list__item:last-child {
@@ -135,20 +197,28 @@
 
 @media (min-width: @desktop-width) {
   .site-list {
-    min-width: 618px;
+    width: 618px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
 
     margin: 0;
     padding: 0;
   }
 
   .site-list__item a {
+    display: block;
+
+    padding: 10px 10px;
+
     font-size: 18px;
     line-height: 18px;
     font-weight: normal;
     text-transform: none;
+
+    &:first-child {
+      padding: 10px 0;
+    }
   }
 
   .site-list__item {
@@ -156,7 +226,6 @@
 
     margin: 0;
     padding: 0;
-    padding-top: 45px;
 
     &--active {
       position: relative;
@@ -167,7 +236,7 @@
         position: absolute;
         right: 0;
         left: 0;
-        bottom: 42px;
+        top: 35px;
 
         height: 2px;
 
@@ -176,12 +245,8 @@
     }
   }
 
-  .site-list__item:first-child {
-    padding-left: 0;
-  }
-
-  .site-list__item:last-child {
-    padding-right: 10px;
+  .site-list__item:not(:last-child) {
+    margin-right: 10px;
   }
 
   .main-nav {
@@ -205,6 +270,8 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     width: 940px;
     min-height: 110px;
 
@@ -214,11 +281,13 @@
     background: none;
   }
 
-  .main-nav__navigation {
-    width: 152px;
+  .main-nav--close .main-nav__wrapper {
+    background: none;
+  }
 
+  .main-nav__navigation {
     margin: 0;
-    padding: 25px 0;
+    padding: 0;
 
     border: none;
   }
@@ -227,11 +296,14 @@
     display: none;
   }
 
-  .main-nav__logo-picture--tablet {
+  .main-nav__logo-picture--tablet,
+  .main-nav__logo-picture--mobile {
     display: none;
   }
 
   .main-nav__logo-picture--desktop {
     display: block;
+
+    margin: 0;
   }
 }

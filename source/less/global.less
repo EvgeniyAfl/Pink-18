@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  .indent-clear();
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @color-black;
+  background-color: @color-white;
+
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  .indent-clear();
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    min-width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    min-width: 960px;
+  }
+}
