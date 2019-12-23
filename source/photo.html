@@ -10,6 +10,13 @@
 
 <body class="page-body page-body--no-js">
 
+  <svg style="display: none;">
+    <symbol viewBox="521.939 473.064 12.545 11.99" id="icon-heart">
+      <path fill="#d6416a"
+        d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
+    </symbol>
+  </svg>
+
   <header class="page-header">
     <nav class="main-nav main-nav--open">
       <!--для закрытия меню используется модификатор: main-nav--close -->
@@ -126,9 +133,12 @@
     <section class="photos">
       <h2 class="visually-hidden">Фотографии пользователей</h2>
       <a href="#">
-      <img class="photos__picture" src="img/panorama-desktop@1x.jpg" srcset="img/panorama-desktop@2x.jpg 2x"
-        width="1200" height="512" alt="Панорама дня">
-        </a>
+        <picture>
+          <source type="image/webp" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+          <img class="photos__picture" src="img/panorama-desktop@1x.jpg 1x" srcset="img/panorama-desktop@2x.jpg 2x"
+            width="1200" height="512" alt="Панорама дня">
+        </picture>
+      </a>
       <div class="photos__wrapper">
         <div class="photos__main main">
           <div class="main__wrapper">
@@ -141,14 +151,8 @@
             </p>
             <p class="main__likes">
               <button class="main__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ: 215</span>
@@ -158,14 +162,19 @@
         <ul class="photos__list list-photo">
           <li class="list-photo__item">
             <a href="#">
-            <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
-              <img class="list-photo__picture" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x"
-                width="300" height="138" alt="Фото машины">
-            </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="list-photo__picture" src="img/photo-car-mobile@1x.jpg 1x"
+                  srcset="img/photo-car-mobile@2x.jpg 2x" width="300" height="138" alt="Фото машины">
+              </picture>
             </a>
             <h3 class="list-photo__name">Левон
               <b class="list-photo__time">(5 ЧАСОВ НАЗАД)</b>
@@ -173,14 +182,8 @@
             <p class="list-photo__info">Вчера он на луну летал, сегодня в руки к нам попал.</p>
             <p class="list-photo__likes">
               <button class="list-photo__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ: 356</span>
@@ -188,14 +191,20 @@
           </li>
           <li class="list-photo__item">
             <a href="#">
-            <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
-              <img class="list-photo__picture" src="img/photo-drumset-mobile@1x.jpg"
-                srcset="img/photo-drumset-mobile@2x.jpg 2x" width="300" height="138" alt="Ударный инструмент">
-            </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="list-photo__picture" src="img/photo-drumset-mobile@1x.jpg 1x"
+                  srcset="img/photo-drumset-mobile@2x.jpg 2x" width="300" height="138" alt="Ударный инструмент">
+              </picture>
             </a>
             <h3 class="list-photo__name">Антон
               <b class="list-photo__time">(12 ЧАСОВ НАЗАД)</b>
@@ -203,14 +212,8 @@
             <p class="list-photo__info">Соседи будут рады!</p>
             <p class="list-photo__likes">
               <button class="list-photo__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ: 666</span>
@@ -218,14 +221,20 @@
           </li>
           <li class="list-photo__item">
             <a href="#">
-            <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
-              <img class="list-photo__picture" src="img/photo-window-mobile@1x.jpg"
-                srcset="img/photo-window-mobile@2x.jpg 2x" width="300" height="138" alt="Окна">
-            </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="list-photo__picture" src="img/photo-window-mobile@1x.jpg 1x"
+                  srcset="img/photo-window-mobile@2x.jpg 2x" width="300" height="138" alt="Окна">
+              </picture>
             </a>
             <h3 class="list-photo__name">Борис
               <b class="list-photo__time">(20 ЧАСОВ НАЗАД)</b>
@@ -233,14 +242,8 @@
             <p class="list-photo__info">Здесь могла бы быть ваша цитата о высоком и вечном.</p>
             <p class="list-photo__likes">
               <button class="list-photo__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ:215</span>
@@ -248,14 +251,19 @@
           </li>
           <li class="list-photo__item">
             <a href="#">
-            <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
-              <img class="list-photo__picture" src="img/photo-fair-mobile@1x.jpg"
-                srcset="img/photo-fair-mobile@2x.jpg 2x" width="300" height="138" alt="Кубань">
-            </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="list-photo__picture" src="img/photo-fair-mobile@1x.jpg 1x"
+                  srcset="img/photo-fair-mobile@2x.jpg 2x" width="300" height="138" alt="Кубань">
+              </picture>
             </a>
             <h3 class="list-photo__name">Сергей
               <b class="list-photo__time">(25 ЧАСОВ НАЗАД)</b>
@@ -263,14 +271,8 @@
             <p class="list-photo__info">Самая кубанская в мире</p>
             <p class="list-photo__likes">
               <button class="list-photo__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ: 4</span>
@@ -278,14 +280,19 @@
           </li>
           <li class="list-photo__item">
             <a href="#">
-            <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
-              <img class="list-photo__picture" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x"
-                width="300" height="138" alt="Горы">
-            </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="list-photo__picture" src="img/photo-pov-mobile@1x.jpg 1x"
+                  srcset="img/photo-pov-mobile@2x.jpg 2x" width="300" height="138" alt="Горы">
+              </picture>
             </a>
             <h3 class="list-photo__name">Максим
               <b class="list-photo__time">(40 ЧАСОВ НАЗАД)</b>
@@ -293,14 +300,8 @@
             <p class="list-photo__info">Где снег-то?</p>
             <p class="list-photo__likes">
               <button class="list-photo__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ: 150</span>
@@ -308,14 +309,19 @@
           </li>
           <li class="list-photo__item">
             <a href="#">
-            <picture>
-              <source media="(min-width: 960px)"
-                srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
-              <img class="list-photo__picture" src="img/photo-wing-mobile@1x.jpg"
-                srcset="img/photo-wing-mobile@2x.jpg 2x" width="300" height="138" alt="В самолете">
-            </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)"
+                  srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                  srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)"
+                  srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="list-photo__picture" src="img/photo-wing-mobile@1x.jpg 1x"
+                  srcset="img/photo-wing-mobile@2x.jpg 2x" width="300" height="138" alt="В самолете">
+              </picture>
             </a>
             <h3 class="list-photo__name">Надежда
               <b class="list-photo__time">(45 ЧАСОВ НАЗАД)</b>
@@ -323,14 +329,8 @@
             <p class="list-photo__info">Всем GM и взаимные лайки</p>
             <p class="list-photo__likes">
               <button class="list-photo__btn" type="button">
-                <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.545px" height="11.99px"
-                  viewBox="521.939 473.064 12.545 11.99" enable-background="new 521.939 473.064 12.545 11.99"
-                  xml:space="preserve">
-                  <g>
-                    <path fill="#d6416a"
-                      d="M528.174,485.055c-0.212,0-0.412-0.091-0.552-0.249c-3.798-4.324-4.644-5.298-4.858-5.572l-0.004,0.0 c-0.529-0.675-0.821-1.518-0.821-2.373c0-2.095,1.704-3.799,3.799-3.799c0.934,0,1.804,0.32,2.484,0.898 c0.696-0.578,1.56-0.898,2.463-0.898c2.095,0,3.799,1.704,3.799,3.799c0,0.909-0.318,1.754-0.896,2.381l-4.86,5.561 C528.587,484.964,528.386,485.055,528.174,485.055L528.174,485.055z M523.929,478.349c0.208,0.255,2.471,2.839,4.243,4.858 l4.323-4.944c0.34-0.369,0.52-0.86,0.52-1.399c0-1.285-1.045-2.331-2.33-2.331c-0.729,0-1.421,0.344-1.9,0.943 c-0.142,0.178-0.353,0.267-0.585,0.275c-0.227-0.003-0.439-0.111-0.575-0.294c-0.441-0.587-1.129-0.925-1.887-0.925 c-1.285,0-2.33,1.046-2.33,2.331c0,0.678,0.275,1.171,0.507,1.467C523.919,478.336,523.925,478.342,523.929,478.349z" />
-                  </g>
+                <svg width="12.545px" height="11.99px">
+                  <use xlink:href="#icon-heart"></use>
                 </svg>
               </button>
               <span>НРАВИТСЯ: 2560</span>
@@ -348,10 +348,15 @@
 
       <div class="upload__wrapper">
         <picture>
+          <source type="image/webp" media="(min-width: 960px)"
+            srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)"
+            srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
           <source media="(min-width: 960px)"
             srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
           <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-          <img class="upload__image" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x"
+          <img class="upload__image" src="img/photo-road-mobile@1x.jpg 1x" srcset="img/photo-road-mobile@2x.jpg 2x"
             width="280" height="377" alt="Фото редактора">
         </picture>
         <div class="upload__editor editor">
