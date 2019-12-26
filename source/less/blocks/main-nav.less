@@ -79,6 +79,20 @@
 
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.main-nav__open,
+.main-nav__close {
+  fill: @color-white;
+
+  &:hover {
+    fill: @color-red;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-body--no-js .main-nav__togle {
@@ -109,43 +123,10 @@
   }
 }
 
-.site-list__item a {
-  color: @color-white;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 32px;
-  text-transform: uppercase;
-}
-
-.site-list__item a[href] {
-  &:hover {
-    color: @color-red;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.site-list {
-  flex-direction: column;
-  list-style: none;
-}
-
-.site-list__item {
-  padding: 15px;
-  text-align: center;
-
-  border-top: 1px solid #485461;
-  border-bottom: 1px solid @color-black;
-}
-
 @media (min-width: @tablet-width) {
   .main-nav__logo-picture {
     width: 150px;
     height: 50px;
-
-    margin-left: 20px;
   }
 
   .main-nav {
@@ -176,7 +157,7 @@
     height: 110px;
 
     margin: 0;
-    padding: 0;
+    padding-bottom: 40px;
   }
 
   .main-nav__wrapper {
@@ -196,57 +177,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-list {
-    width: 618px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    margin: 0;
-    padding: 0;
-  }
-
-  .site-list__item a {
-    display: block;
-
-    padding: 10px 10px;
-
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: normal;
-    text-transform: none;
-
-    &:first-child {
-      padding: 10px 0;
-    }
-  }
-
-  .site-list__item {
-    border: none;
-
-    margin: 0;
-    padding: 0;
-
-    &--active {
-      position: relative;
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        right: 0;
-        left: 0;
-        top: 35px;
-
-        height: 2px;
-
-        background: @color-white;
-      }
-    }
-  }
-
-  .site-list__item:not(:last-child) {
-    margin-right: 10px;
+  .page-header {
+    position: relative;
   }
 
   .main-nav {
@@ -258,7 +190,6 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: center 0;
     background-repeat: no-repeat;
-    background-color: transparent;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
@@ -287,7 +218,7 @@
 
   .main-nav__navigation {
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
 
     border: none;
   }
