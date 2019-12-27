@@ -11,10 +11,6 @@
   width: 260px;
 }
 
-.editor__icon .editor__icon-color-red {
-  fill: @color-red;
-}
-
 .editor__button {
   display: block;
 
@@ -23,9 +19,17 @@
   cursor: pointer;
 }
 
+.editor__icon {
+  fill: @color-red;
+}
+
 @media (max-width: @mobile-width-only) {
   .editor__wrapper {
     margin-bottom: 33px;
+  }
+
+  .editor__icon--mobile {
+    fill: @color-gray-dark;
   }
 
   .editor__wrapper-toggles {

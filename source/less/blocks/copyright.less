@@ -30,12 +30,11 @@
   display: block;
 }
 
-.copyright__icon,
-.copyright__site svg {
+.copyright__icon {
+  fill: @color-red;
+
   &:hover {
-    path {
-      fill: @color-blue;
-    }
+    fill: @color-blue;
   }
 
   &:active {
@@ -48,6 +47,7 @@
     width: 130px;
 
     margin: 0;
+    margin-right: 10px;
   }
 
   .copyright {
