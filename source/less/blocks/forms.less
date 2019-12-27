@@ -162,7 +162,9 @@
     border-color: @color-red;
   }
 
-  &::placeholder {
+  &::placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder {
     display: block;
     padding: 15px 20px;
   }
@@ -302,6 +304,8 @@
     position: absolute;
     top: 22px;
     right: 22px;
+
+    fill: @color-red;
   }
 
   .forms__name-wrapper {
