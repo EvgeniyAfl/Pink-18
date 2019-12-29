@@ -6,7 +6,7 @@
 }
 
 .copyright__wrapper {
-  width: 150px;
+  width: 130px;
   margin: 0 auto;
   margin-bottom: 40px;
   padding: 0;
@@ -21,19 +21,20 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 150px;
+  width: 130px;
+
+  margin: 0;
 }
 
 .copyright__site {
   display: block;
 }
 
-.copyright__icon,
-.copyright__site svg {
+.copyright__icon {
+  fill: @color-red;
+
   &:hover {
-    path {
-      fill: @color-blue;
-    }
+    fill: @color-blue;
   }
 
   &:active {
@@ -46,6 +47,7 @@
     width: 130px;
 
     margin: 0;
+    margin-right: 10px;
   }
 
   .copyright {
@@ -55,9 +57,11 @@
 
 @media (min-width: @desktop-width) {
   .copyright__wrapper {
-    display: block;
-
     width: 150px;
+  }
+
+  .copyright {
+    width: 152px;
   }
 
   .copyright__author {

@@ -1,6 +1,6 @@
 .upload {
   width: 100%;
-  min-height: 756px;
+  height: 756px;
 
   margin: 0 auto;
   margin-bottom: 40px;
@@ -13,21 +13,6 @@
 
   margin: 0 auto;
   padding-top: 20px;
-}
-
-.photos__upload-info {
-  display: block;
-  width: 260px;
-
-  margin: 43px auto;
-
-  color: @color-blue;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 30px;
-  text-align: center;
-
-  background-color: @color-white;
 }
 
 .upload__image {
@@ -44,9 +29,9 @@
 @media (min-width: @tablet-width) {
   .upload {
     width: 100%;
-    min-height: 500px;
+    max-height: 510px;
 
-    margin-bottom: 27px;
+    margin-bottom: 37px;
 
     background-color: @color-gray;
   }
@@ -82,14 +67,16 @@
     width: 300px;
 
     margin: 0;
-    margin-top: 52px;
+    margin-top: 57px;
     margin-left: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .upload {
-    margin-bottom: 90px;
+    height: 510px;
+
+    margin-bottom: 96px;
 
     background: none;
   }
@@ -98,6 +85,7 @@
     justify-content: space-around;
 
     width: 940px;
+    height: 510px;
 
     margin: 0 auto;
     padding: 0;
@@ -112,18 +100,13 @@
     height: 400px;
 
     margin-top: 56px;
-    margin-left: 80px;
+    margin-left: 45px;
   }
 
   .upload__editor {
-    width: 410px;
+    width: 450px;
 
     margin: 0;
     margin-top: 52px;
-  }
-
-  .photos__upload-info {
-    margin: 0 auto;
-    margin-bottom: 50px;
   }
 }
