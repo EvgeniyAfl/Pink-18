@@ -47,6 +47,10 @@
   margin-bottom: 25px;
 }
 
+.forms__desktop-view {
+  display: none;
+}
+
 .forms__checkbox-list {
   width: 280px;
   display: flex;
@@ -453,6 +457,7 @@
   }
 
   .forms__decription span {
+    position: relative;
     background-color: @color-white;
 
     padding: 0 40px;
@@ -588,15 +593,13 @@
   }
 
   .forms__legend {
-    display: none;
-
-    margin: 0;
-  }
-
-  .forms__legend--desktop {
-    display: block;
+    display: inline-block;
 
     margin-right: 10px;
+  }
+
+  .forms__desktop-view {
+    display: inline-block;
   }
 
   .forms__question-list {
@@ -701,7 +704,6 @@
   }
 
   .forms__decription--small-pad {
-    position: relative;
     width: 940px;
 
     top: 13px;
