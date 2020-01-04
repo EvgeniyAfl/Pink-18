@@ -32,12 +32,12 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -3px;
-  background-size: cover;
+  background-size: 330px auto;
 
   @media (min-resolution: @retina-dppx) {
   background-image: url("../img/bg-back-mobile@2x.jpg");
   background-repeat: no-repeat;
-  background-position: center -43px;
+  background-position: center -5px;
   }
 }
 
@@ -50,6 +50,8 @@
 }
 
 .main-nav__logo-picture {
+  display: inline-block;
+
   &:hover {
     path {
       fill: @color-red;
@@ -61,35 +63,34 @@
   }
 }
 
-.main-nav__logo-picture--tablet,
-.main-nav__logo-picture--desktop {
+.main-nav__logo-picture-tablet,
+.main-nav__logo-picture-desktop {
   display: none;
 }
 
 .main-nav__logo {
-  display: block;
+  display: inline-block;
 
-  padding: 0;
+  padding: 5px 0;
   cursor: pointer;
 }
 
 .main-nav__navigation {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 
   .indent-clear();
-  padding: 20px;
+  padding: 15px 20px;
 
   border-bottom: 1px solid @color-black;
 }
 
 .main-nav__togle {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 
-  width: 50px;
   height: 33px;
 
   .indent-clear();
@@ -118,7 +119,7 @@
 
 .main-nav__close {
   width: 50px;
-  height: 33px;
+  height: 25px;
 }
 
 @media (max-width: @mobile-tablet-width) {
@@ -153,12 +154,12 @@
     padding: 0;
   }
 
-  .main-nav__logo-picture--mobile {
+  .main-nav__logo-picture-mobile {
     display: none;
   }
 
-  .main-nav__logo-picture--tablet {
-    display: block;
+  .main-nav__logo-picture-tablet {
+    display: inline-block;
   }
 
   @media (max-width: @tablet-width-only) {
@@ -180,10 +181,10 @@
   }
 
   .main-nav__navigation {
+    align-items: center;
     height: 110px;
 
     margin: 0;
-    padding-bottom: 40px;
   }
 
   .main-nav__wrapper {
@@ -201,7 +202,7 @@
 @media (min-width: @desktop-width) {
   .page-header {
     position: relative;
-    background-color: @color-black;
+    background-color: rgba(0, 0, 0, 1);
   }
 
   .main-nav {
@@ -253,13 +254,13 @@
     display: none;
   }
 
-  .main-nav__logo-picture--tablet,
-  .main-nav__logo-picture--mobile {
+  .main-nav__logo-picture-tablet,
+  .main-nav__logo-picture-mobile {
     display: none;
   }
 
-  .main-nav__logo-picture--desktop {
-    display: block;
+  .main-nav__logo-picture-desktop {
+    display: inline-block;
 
     margin: 0;
   }
