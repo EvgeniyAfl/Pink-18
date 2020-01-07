@@ -1,6 +1,7 @@
 .table {
-  display: none;
-  width: 620px;
+  position: relative;
+
+  width: 270%;
 
   margin: 0 auto;
 
@@ -10,6 +11,7 @@
   border-collapse: collapse;
   border-radius: 3px;
   background-color: @color-white;
+  transform: translateX(-31%);
 }
 
 .table__description {
@@ -26,6 +28,10 @@
   border: 2px solid @color-gray;
 }
 
+.table__row > th:first-child {
+  display: none;
+}
+
 .table__price {
   color: @color-white;
   font-size: 18px;
@@ -34,64 +40,110 @@
 }
 
 .table__title {
+  position: relative;
   border: 2px solid @color-gray;
-  width: 161px;
+  box-sizing: border-box;
 
-  padding-top: 17px;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding: 20px;
 
   color: @color-blue;
   font-size: 14px;
   font-weight: 400;
   line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
 }
 
-.table__title--bg-gray {
+.table__object {
+  color: @color-blue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table__title--empty {
+  display: none;
   background-color: @color-gray;
 }
 
 .table__title--bg-blue {
   background-color: @color-blue;
+
+  text-align: center;
 }
 
-.table__title--left-align {
-  text-align: left;
+.table__title--hit {
+  background-image: url("../img/bg-hit.svg");
+  background-repeat: no-repeat;
+
+  &::after {
+    content: "ХИТ";
+
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    transform: rotate(-45deg);
+
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @color-white;
+  }
+}
+
+.table__option {
+  position: absolute;
+  top: 27px;
+  right: 10px;
+
+  width: 32px;
+  height: 27px;
+
+  font-size: 0;
+}
+
+.table__option--no {
+  background-image: url("../img/icon-no.svg");
+  background-repeat: no-repeat;
+}
+
+.table__option--yes {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .table {
-    display: block;
+    width: 620px;
+
+    transform: none;
   }
 
   .table__title {
     padding: 0;
     padding-top: 4px;
     padding-left: 21px;
-    padding-right: 21px;
   }
 
   .table__title--bg-blue {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 20px;
 
     border-radius: 5px;
   }
 
-  .table__title--bg-blue:nth-child(3) {
-    position: relative;
+  .table__title--empty {
+    display: table-cell;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
+  .table__row > th:first-child {
+    display: table-cell;
+  }
 
-      width: 60px;
-      height: 60px;
-
-      background-image: url("../img/bg-hit-tablet.svg");
-    }
+  .table__rates-name {
+    display: none;
   }
 
   .table__hit {
@@ -107,12 +159,25 @@
     z-index: 1;
   }
 
-  .table__title--left-align {
-    padding-top: 0;
-  }
-
   .table__title--bg-blue .table__description {
     padding-top: 5px;
+  }
+
+  .table__option {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+
+    margin: auto;
+  }
+
+  .table__object {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+
+    text-transform: none;
   }
 }
 
@@ -151,5 +216,9 @@
     padding-bottom: 5px;
 
     font-size: 24px;
+  }
+
+  .table__object {
+    font-size: 18px;
   }
 }
