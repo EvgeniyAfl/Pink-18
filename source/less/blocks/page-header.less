@@ -1,0 +1,19 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 10;
+}
+
+.page-body--no-js .page-header {
+  position: static;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    position: relative;
+    background-color: rgba(0, 0, 0, 1);
+  }
+}

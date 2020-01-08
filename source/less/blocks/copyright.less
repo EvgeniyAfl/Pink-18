@@ -5,7 +5,7 @@
   line-height: 18px;
 }
 
-.copyright__wrapper {
+.copyright-wrapper {
   width: 130px;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -23,14 +23,17 @@
 
   width: 130px;
 
-  margin: 0;
+  margin: 0 auto;
 }
 
 .copyright__site {
-  display: block;
-}
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 
-.copyright__icon {
+  width: 150px;
+
   fill: @color-red;
 
   &:hover {
@@ -38,12 +41,12 @@
   }
 
   &:active {
-    opacity: 0.7;
+    fill-opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .copyright__wrapper {
+  .copyright-wrapper {
     width: 130px;
 
     margin: 0;
@@ -56,7 +59,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .copyright__wrapper {
+  .copyright-wrapper {
     width: 150px;
   }
 

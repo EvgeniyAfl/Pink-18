@@ -74,6 +74,10 @@
   display: none;
 }
 
+.slider__feedback-info {
+  display: none;
+}
+
 .slider__feedback-list {
   list-style: none;
 
@@ -204,6 +208,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .slider__feedback-info {
+    display: block;
+
+    color: @color-blue;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
   .slider__button--active::before {
     top: -2px;
     left: -2px;
@@ -250,6 +262,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .slider__feedback-info {
+    display: block;
+
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
   .slider__quotes {
     display: block;
 
@@ -258,8 +278,6 @@
 
     fill: @color-gray-dark;
   }
-
-  .slide
 
   .slider__feedback-list {
     width: 700px;
