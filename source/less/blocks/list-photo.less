@@ -1,12 +1,15 @@
 .list-photo {
-  .indent-clear();
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 400px;
+
   list-style: none;
 }
 
 .list-photo__item {
+  width: 280px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 
   color: #283645;
   font-size: 14px;
@@ -14,15 +17,43 @@
   line-height: 24px;
   text-align: left;
 
-  margin: 0 20px;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding-bottom: 20px;
 
   background-color: #f2f2f2;
 }
 
+.list-photo__item a {
+  display: block;
+}
+
+.list-photo__item--panorama {
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  background: none;
+}
+
+.list-photo__item--panorama .list__photo-picture {
+  width: 100%;
+  height: 190px;
+}
+
 .list-photo__picture-main {
   .indent-clear();
+}
+
+.list-photo__picture {
+  display: block;
+
+  width: 100%;
 }
 
 .list-photo__info {
@@ -38,7 +69,9 @@
   display: flex;
 
   margin: 0;
+  margin-top: auto;
   padding-left: 18px;
+  padding-bottom: 0;
 
   color: #d22856;
   font-size: 12px;
@@ -76,21 +109,27 @@
     width: 620px;
     display: flex;
     flex-wrap: wrap;
+
+    padding-top: 650px;
   }
 
-  .list-photo__item {
-    display: inline-block;
+  .list-photo__item:not(.list-photo__item--panorama) {
     width: 300px;
-    margin: 0;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    // margin: 0;
+    // // margin-right: 20px;
+    // // margin-bottom: 20px;
   }
 
-  @media (max-width: @tablet-width-only) {
-    .list-photo__item:nth-child(2n) {
-      margin-right: 0;
-    }
+  .list-photo__item--panorama .list__photo-picture {
+    height: 510px;
   }
+
+
+  // @media (max-width: @tablet-width-only) {
+  //   .list-photo__item:nth-child(2n) {
+  //     margin-right: 0;
+  //   }
+  // }
 
   .list-photo__item--tablet-view {
     display: inline-block;
@@ -142,6 +181,7 @@
     width: 960px;
 
     margin: 0 auto;
+    padding-top: 650px;
   }
 
   .list-photo__btn {
@@ -154,9 +194,5 @@
 
   .list-photo__item {
     margin-bottom: 57px;
-  }
-
-  .list-photo__item:nth-child(3n) {
-    margin-right: 0;
   }
 }

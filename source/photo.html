@@ -11,17 +11,15 @@
   <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
 </head>
 
-<body class="page-body">
-  <!-- для отключенного JS: page-body--no-js -->
+<body class="page-body page-body--no-js">
 
   <div style="display: none;">
     <include src="source/img/sprite.svg"></include>
   </div>
 
   <header class="page-header">
-    <nav class="main-nav main-nav--close">
-      <!--для закрытия меню используется модификатор: main-nav--close -->
-      <div class="main-nav__wrapper">
+    <nav class="main-nav main-nav--open">
+      <!-- <div class="main-nav__wrapper"> -->
         <div class="main-nav__navigation">
           <a class="main-nav__logo" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">Логотип сайта "Пинк"</span>
@@ -54,7 +52,7 @@
               </g>
             </svg>
           </a>
-          <button class="main-nav__togle" type="button" aria-label="открыть меню">
+          <button class="main-nav__togle" type="button"><span class="visually-hidden">Открыть меню</span>
             <svg class="main-nav__open" width="23.867px" height="23.867px">
               <use xlink:href="#icon-menu-cross"></use>
             </svg>
@@ -77,7 +75,7 @@
             <a href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
-      </div>
+      <!-- </div> -->
 
     </nav>
   </header>
@@ -92,7 +90,7 @@
     </p>
     <section class="photos">
       <h2 class="visually-hidden">Фотографии пользователей</h2>
-      <a href="#">
+      <!-- <a href="#">
         <picture>
           <source media="(min-width: 960px)" type="image/webp"
             srcset="img/panorama-desktop@1x.webp, img/panorama-desktop@2x.webp 2x">
@@ -105,8 +103,8 @@
             width="1200" height="512" alt="Панорама дня">
         </picture>
         <span class="photos__best">ПАНОРАМА ДНЯ</span>
-      </a>
-      <div class="photos__wrapper">
+      </a> -->
+      <!-- <div class="photos__wrapper">
         <div class="photos__main main">
           <div class="main__wrapper">
             <h3 class="main__name">Анна
@@ -125,8 +123,44 @@
               <span>НРАВИТСЯ: 215</span>
             </p>
           </div>
-        </div>
+        </div> -->
         <ul class="photos__list list-photo">
+          <li class="list-photo__item list-photo__item--panorama">
+            <a href="#">
+              <picture>
+                <source media="(min-width: 960px)" type="image/webp"
+                  srcset="img/panorama-desktop@1x.webp, img/panorama-desktop@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" type="image/webp"
+                  srcset="img/panorama-tablet@1x.webp, img/panorama-tablet@2x.webp 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp, img/panorama-tablet@2x.webp 2x">
+                <img class="list__photo-picture" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x"
+                  width="1200" height="512" alt="Панорама дня">
+              </picture>
+              <span class="photos__best">ПАНОРАМА ДНЯ</span>
+            </a>
+            <div class="photos__wrapper">
+              <div class="photos__main main">
+                <div class="main__wrapper">
+                  <h3 class="main__name">Анна
+                    <b class="main__time">(5 МИНУТ НАЗАД)</b>
+                  </h3>
+                  <p class="main__info">
+                    Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию
+                    в перископе, задавайте свои вопросы!
+                  </p>
+                  <p class="main__likes">
+                    <button class="main__btn" type="button">
+                      <svg width="12.545px" height="11.99px">
+                        <use xlink:href="#icon-heart"></use>
+                      </svg>
+                    </button>
+                    <span>НРАВИТСЯ: 215</span>
+                  </p>
+                </div>
+              </div>
+          </li>
           <li class="list-photo__item">
             <a href="#">
               <picture>
@@ -477,6 +511,7 @@
     </div>
   </footer>
   <script src="js/picturefill.min.js"></script>
+  <script src="js/menu.min.js"></script>
 </body>
 
 </html>
