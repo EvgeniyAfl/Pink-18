@@ -84,13 +84,11 @@
     </div>
 
     <section class="forms">
-      <div class="forms__wrapper">
         <h2 class="visually-hidden">Введите данные формы</h2>
         <p class="forms__info">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу
           бонусную карту!
           <span class="forms__info forms__info--tablet">Пожалуйста, заполните форму ниже:</span>
         </p>
-      </div>
       <form class="forms__question-list" method="POST" action="https://echo.htmlacademy.ru">
         <div class="forms__name-wrapper">
           <p class="forms__group">
@@ -108,10 +106,11 @@
             <input class="forms__input" type="text" name="patronym" id="user-patronym" placeholder="Ну и отчество тоже">
           </p>
         </div>
+        <div class="forms__checkbox-container">
         <fieldset class="forms__checkbox checkbox">
+          <legend class="checkbox__decription checkbox__decription--tablet-border">Ваши безбашенные достижения в
+            путешествии</legend>
           <div class="checkbox__wrapper">
-            <h3 class="checkbox__decription checkbox__decription--tablet-border"><span>Ваши безбашенные достижения в
-                путешествии</span></h3>
             <ul class="checkbox__list">
               <li class="checkbox__item">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="make-selfy" id="selfy" checked="">
@@ -135,15 +134,16 @@
               </li>
               <li class="checkbox__item">
                 <input class="checkbox__input visually-hidden" type="checkbox" name="smash-hotel" id="hotel">
-                <label class="checkbox__label" for="hotel">Разгромил отель
-                </label>
+                <label class="checkbox__label" for="hotel">Разгромил отель</label>
               </li>
+
             </ul>
           </div>
-
         </fieldset>
+        </div>
         <div class="forms__number-wrapper">
-          <h3 class="forms__decription forms__decription--tablet-desktop"><span>Контактная информация</span></h3>
+          <fieldset class="forms__set">
+          <legend class="forms__decription forms__decription--tablet-desktop">Контактная информация</legend>
           <div class="forms__container">
             <div class="forms__label-wrapper">
               <label for="number" class="forms__label forms__label--desktop">НОМЕР ТЕЛЕФОНА</label>
@@ -166,10 +166,13 @@
               </div>
             </div>
           </div>
+          </fieldset>
         </div>
-        <div class="forms__wrapper forms__wrapper--bgray">
-          <h3 class="forms__decription forms__decription--tablet-border forms__decription--deskto-border"><span>С каким
-              приложением путешествовали?</span></h3>
+        <div class="forms__wrapper">
+        <fieldset class="forms__set forms__set--bgray">
+          <legend class="forms__decription forms__decription--tablet-border forms__decription--deskto-border">С каким
+              приложением путешествовали?
+            </legend>
           <ul class="forms__checkbox-list checkbox-list">
             <li class="checkbox-list__item">
               <input class="checkbox-list__input visually-hidden" type="radio" name="app-group" id="ios" value="iOS"
@@ -187,18 +190,22 @@
               <label class="checkbox-list__label" for="windows">Windows Phone</label>
             </li>
           </ul>
+        </fieldset>
         </div>
         <div class="forms__send-wrapper">
-          <h3 class="forms__decription forms__decription--small-pad"><span>Опишите свои эмоции</span></h3>
+          <fieldset class="forms__set">
+          <legend class="forms__decription forms__decription--small-pad">Опишите свои эмоции</legend>
           <label class="forms__item">
             <textarea class="forms__text" name="user-text" rows="6"
               placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </label>
+          </fieldset>
           <button class="forms__send" type="submit">Отправить форму</button>
           <small class="forms__legend">
             <sup class="forms__sup">*</sup> — обязательные <span class="forms__desktop-view">для заполнения</span> поля
           </small>
         </div>
+      </div>
       </form>
     </section>
     <section class="page-next__popup modal modal--done">
@@ -324,7 +331,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/menu.min.js"></script>
+  <!-- <script src="js/menu.min.js"></script> -->
 </body>
 
 </html>

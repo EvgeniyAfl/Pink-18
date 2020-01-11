@@ -21,6 +21,10 @@
 }
 
 .forms__wrapper {
+  background-color: @color-gray;
+}
+
+.forms__set {
   display: flex;
   width: 280px;
   flex-direction: column;
@@ -28,6 +32,8 @@
   margin: 0 auto;
 
   padding: 0;
+
+  border: none;
 }
 
 .forms__name-wrapper,
@@ -49,6 +55,10 @@
 
 .forms__desktop-view {
   display: none;
+}
+
+.forms__checkbox-container {
+  background-color: @color-gray;
 }
 
 .forms__checkbox-list {
@@ -225,7 +235,7 @@
   color: @color-red;
 }
 
-.forms__wrapper--bgray {
+.forms__set--bgray {
   width: 100%;
 
   .indent-clear();
@@ -233,7 +243,7 @@
 
   align-items: center;
 
-  background-color: @color-gray;
+  border: none;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -243,11 +253,17 @@
 }
 
 @media (min-width: @tablet-width) {
-  .forms__wrapper {
-    width: 660px;
+  .forms__set {
+    width: 620px;
 
     margin: 0 auto;
     padding: 0;
+
+    border: 2px solid @color-gray;
+  }
+
+  .forms__wrapper {
+    background: none;
   }
 
   .forms__info {
@@ -361,15 +377,26 @@
     margin: 0 auto;
   }
 
+  .forms__checkbox-container {
+    background: none;
+
+    order: 4;
+  }
+
   .forms__checkbox {
+    width: 620px;
+
+    margin: 0 auto;
+
     order: 4;
 
     background: none;
+    border: 2px solid @color-gray;
   }
 
-  .forms__wrapper--bgray {
+  .forms__set--bgray {
     display: block;
-    position: relative;
+    align-items: baseline;
 
     width: 620px;
 
@@ -378,7 +405,7 @@
     order: 1;
 
     background: none;
-    align-items: baseline;
+    border: 2px solid @color-gray;
   }
 
   .forms__question-list {
@@ -401,8 +428,6 @@
 
   .forms__number-wrapper .forms__decription {
     padding: 0;
-    padding-top: 45px;
-    padding-bottom: 24px;
   }
 
   .forms__send-wrapper {
@@ -419,8 +444,7 @@
   }
 
   .forms__decription {
-    display: inline-block;
-    width: 620px;
+    width: 410px;
 
     font-size: 14px;
     line-height: 30px;
@@ -431,19 +455,18 @@
     margin-bottom: 0;
   }
 
-  .forms__decription::after {
-    content: "";
+  // .forms__set::after {
+  //   content: "";
 
-    position: absolute;
-    top: 59px;
-    left: 0;
+  //   position: absolute;
+  //   top: 59px;
+  //   left: 0;
 
-    width: 616px;
-    height: 296px;
+  //   width: 616px;
 
-    border: 2px solid @color-gray;
-    z-index: -1;
-  }
+  //   border: 2px solid @color-gray;
+  //   z-index: -1;
+  // }
 
   .forms__decription--small-pad {
     margin-bottom: 30px;
@@ -456,17 +479,15 @@
     height: 288px;
   }
 
-  .forms__decription span {
-    position: relative;
-    background-color: @color-white;
+  // .forms__decription span {
+  //   position: relative;
+  //   background-color: @color-white;
 
-    padding: 0 40px;
-  }
+  //   padding: 0 40px;
+  // }
 
   .forms__decription--tablet-desktop {
     display: block;
-
-    padding-bottom: 25px;
 
     &::after {
       height: 311px;
@@ -520,6 +541,10 @@
     line-height: 30px;
   }
 
+  .forms__wrapper {
+    order: 1;
+  }
+
   .forms__input {
     padding: 0;
     padding-left: 20px;
@@ -544,7 +569,7 @@
     margin-left: 95px;
   }
 
-  .forms__wrapper {
+  .forms__set {
     flex-direction: row;
     flex-wrap: wrap;
     width: 940px;
@@ -613,7 +638,7 @@
     padding: 0 10px;
   }
 
-  .forms__wrapper--bgray {
+  .forms__set--bgray {
     width: 435px;
 
     margin: 0;
@@ -626,7 +651,7 @@
 
   .forms__decription {
     display: block;
-    width: 440px;
+    width: 340px;
 
     margin-bottom: 30px;
     padding: 0;
@@ -704,8 +729,6 @@
   }
 
   .forms__decription--small-pad {
-    width: 940px;
-
     top: 13px;
     left: 0;
 
