@@ -17,7 +17,7 @@
 .checkbox__item {
   position: relative;
 
-  margin-bottom: 53px;
+  margin-bottom: 52px;
 
   &:last-child {
     margin: 0;
@@ -27,8 +27,11 @@
 .checkbox__decription {
   display: block;
   width: 230px;
+
   margin: 0 auto;
-  padding: 40px 0;
+  margin-bottom: 42px;
+  padding: 0;
+  padding-top: 38px;
 
   text-align: center;
   color: @color-red;
@@ -51,11 +54,11 @@
   content: "";
 
   position: absolute;
-  top: -10px;
+  top: -4px;
   left: 0;
 
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 
   border: 2px solid @color-gray-dark;
   background-color: @color-white;
@@ -79,12 +82,31 @@
   top: -5px;
   left: 0;
 
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 
-  background-image: url("../img/icon-yes.svg");
-  background-repeat: no-repeat;
-  background-position: 6px 6px;
+
+
+  // background-image: url("../img/yes.svg");
+  // background-repeat: no-repeat;
+  // background-position: 6px 7px;
+  // background-size: 23px 23px;
+  // fill: @color-red;
+}
+
+.checkbox__input:checked + .checkbox__label::after,
+.checkbox__input:disabled + .checkbox__label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 10px;
+
+  width: 20px;
+  height: 10px;
+
+  border-left: 2px solid @color-red;
+  border-bottom: 2px solid @color-red;
+  transform: rotate(-45deg);
 }
 
 .checkbox__input:focus + .checkbox__label::before {
