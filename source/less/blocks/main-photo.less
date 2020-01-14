@@ -45,7 +45,8 @@
 }
 
 .main-photo {
-  padding-top: 70px;
+  margin-top: 0;
+  padding-top: 97px;
 
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -145,6 +146,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-body--no-js .main-photo {
+    margin-bottom: 48px;
+  }
+
   .main-photo__container {
     display: block;
     position: relative;
@@ -156,16 +161,15 @@
   .main-photo {
     margin-bottom: 45px;
     padding-top: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 95px;
 
     background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
-    background-position: center 85px, center -111px;
-    background-size: 687px auto, 1200px auto;
+    background-position: center 73px, center -111px;
+    background-size: 699px auto, 1200px auto;
 
     @media (min-resolution: @retina-dppx),
     (min-resolution: @retina-dpi) {
       background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@2x.jpg");
-      background-size: 687px auto, 1220px auto;
     }
   }
 
@@ -176,14 +180,14 @@
   .main-photo__info {
     width: 240px;
 
-    margin-top: 69px;
+    margin-top: 70px;
     margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 0;
 
     font-size: 40px;
-    line-height: 50px;
+    line-height: 49px;
   }
 
   .main-photo__info::after {
@@ -196,11 +200,12 @@
   }
 
   .main-photo__apps-wrapper {
+    margin-top: 21px;
+    margin-right: 0;
+    margin-left: 0;
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
-    margin-right: 0;
-    margin-left: 0;
 
     background-color: transparent;
   }
@@ -219,7 +224,7 @@
   }
 
   .main-photo__item:first-child {
-    margin-bottom: 47px;
+    margin-bottom: 33px;
   }
 
   .main-photo__item:last-child {
@@ -244,21 +249,38 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-body--no-js .main-photo {
+    padding-top: 160px;
+  }
+
   .main-photo {
-
     margin-top: 0;
-    margin-bottom: 70px;
+    margin-bottom: 66px;
+    padding-top: 160px;
+    padding-bottom: 0;
 
-    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
-    background-position: center 97px, center -110px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: center 0;
     background-repeat: no-repeat;
-    background-size: 1050px auto, 2564px 855px;
+    background-size: 2564px 855px;
 
     @media (min-resolution: @retina-dppx),
     (min-resolution: @retina-dpi) {
-      background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
-      background-size: 1050px auto, 2595px 855px;
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-position: center 11px;
     }
+
+
+    // background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/bg-back-desktop@1x.jpg");
+    // background-position: center 209px, center 0;
+    // background-repeat: no-repeat;
+    // background-size: 1050px auto, 2564px 855px;
+
+    // @media (min-resolution: @retina-dppx),
+    // (min-resolution: @retina-dpi) {
+    //   background-image: url("../img/iphone-hand-desktop@2x.png"), url("../img/bg-back-desktop@2x.jpg");
+    //   background-size: 1050px auto, 2595px 855px;
+    // }
   }
 
   .main-photo__btn {
@@ -273,11 +295,25 @@
 
   .main-photo__container {
     width: 940px;
+
+    padding-top: 20px;
+    padding-bottom: 122px;
+
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 16px 49px;
+    background-repeat: no-repeat;
+    background-size: 1050px auto;
+
+    @media (min-resolution: @retina-dppx),
+    (min-resolution: @retina-dpi) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-size: 1050px auto;
+    }
   }
 
   .main-photo__info {
-    margin-top: 89px;
-    margin-left: 40px;
+    margin-top: 38px;
+    margin-left: 32px;
 
     font-size: 50px;
     line-height: 60px;
@@ -293,8 +329,6 @@
   }
 
   .main-photo__apps-wrapper {
-    bottom: 177px;
-
-    margin-left: 10px;
+    margin-top: 26px;
   }
 }

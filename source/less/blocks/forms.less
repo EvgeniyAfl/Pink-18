@@ -134,10 +134,9 @@
 
 .forms__decription {
   display: block;
-  width: 225px;
 
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 40px;
 
   text-align: center;
   color: @color-red;
@@ -252,6 +251,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .forms {
+    margin-bottom: 51px;
+  }
+
   .forms__set {
     width: 620px;
 
@@ -263,6 +266,8 @@
 
   .forms__wrapper {
     background: none;
+
+    margin-bottom: 51px;
   }
 
   .forms__info {
@@ -270,7 +275,7 @@
     width: 500px;
 
     margin: 0 auto;
-    margin-bottom: 70px;
+    margin-bottom: 36px;
 
     font-size: 18px;
     text-align: center;
@@ -292,6 +297,8 @@
     height: 64px;
 
     margin: 0;
+    padding-left: 19px;
+    padding-bottom: 18px;
 
     box-sizing: border-box;
   }
@@ -334,7 +341,7 @@
     order: 0;
 
     margin: 0 auto;
-    margin-bottom: 13px;
+    margin-bottom: 52px;
     padding: 0;
   }
 
@@ -361,7 +368,7 @@
       display: block;
       width: 150px;
 
-      margin-top: 10px;
+      margin-top: 9px;
       margin-left: 20px;
       margin-bottom: 27px;
     }
@@ -386,6 +393,9 @@
     width: 620px;
 
     margin: 0 auto;
+    margin-bottom: 51px;
+    padding: 0;
+    padding-bottom: 28px;
 
     order: 4;
 
@@ -399,7 +409,7 @@
 
     width: 620px;
 
-    margin-bottom: 24px;
+    padding-bottom: 15px;
 
     order: 1;
 
@@ -419,14 +429,10 @@
     width: 620px;
 
     margin: 0 auto;
-    margin-bottom: 18px;
+    margin-bottom: 57px;
     padding: 0;
 
     order: 3;
-  }
-
-  .forms__number-wrapper .forms__decription {
-    padding: 0;
   }
 
   .forms__send-wrapper {
@@ -443,29 +449,13 @@
   }
 
   .forms__decription {
-    width: 410px;
+    margin-bottom: 41px;
+    padding: 0 40px;
 
     font-size: 14px;
     line-height: 30px;
     text-transform: uppercase;
   }
-
-  .forms__decription--tablet-border {
-    margin-bottom: 0;
-  }
-
-  // .forms__set::after {
-  //   content: "";
-
-  //   position: absolute;
-  //   top: 59px;
-  //   left: 0;
-
-  //   width: 616px;
-
-  //   border: 2px solid @color-gray;
-  //   z-index: -1;
-  // }
 
   .forms__decription--small-pad {
     margin-bottom: 30px;
@@ -488,27 +478,29 @@
   .forms__decription--tablet-desktop {
     display: block;
 
+    margin-bottom: 32px;
+
     &::after {
       height: 311px;
     }
   }
 
   .forms__text {
-    width: 500px;
-
     margin: 0 auto;
+    padding-left: 18px;
   }
 
   .forms__item {
     display: block;
-    width: 520px;
+    width: 500px;
 
     margin: 0 auto;
-    margin-bottom: 120px;
+    margin-bottom: 38px;
   }
 
   .forms__legend {
     margin: 0;
+    margin-top: 66px;
     padding-top: 15px;
     padding-bottom: 15px;
   }
@@ -516,6 +508,7 @@
   .forms__send {
     width: 300px;
 
+    margin-top: 67px;
     padding-left: 50px;
     padding-right: 50px;
   }

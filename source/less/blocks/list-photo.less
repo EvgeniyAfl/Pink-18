@@ -109,20 +109,27 @@
   .list-photo {
     width: 620px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 
-    padding-top: 650px;
+    padding-top: 679px;
   }
 
   .list-photo__item:not(.list-photo__item--panorama) {
     width: 300px;
-    // margin: 0;
-    // // margin-right: 20px;
-    // // margin-bottom: 20px;
+
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 22px;
+  }
+
+
+  .list-photo__item--panorama a {
+    max-height: 508px;
   }
 
   .list-photo__item--panorama .list__photo-picture {
-    height: 510px;
+    height: 508px;
   }
 
 
@@ -163,7 +170,7 @@
   }
 
   .list-photo__name {
-    padding-top: 18px;
+    padding-top: 24px;
     padding-left: 27px;
   }
 

@@ -115,12 +115,14 @@
   .advantages__list-container {
     width: 100%;
 
-    margin-bottom: 50px;
+    margin-bottom: 43px;
   }
 
   .advantages__description {
+    margin: 0;
+
     font-size: 40px;
-    line-height: 50px;
+    line-height: 49px;
   }
 
   .advantages__info {
@@ -161,6 +163,10 @@
 
   .advantages__list-wrapper {
     display: flex;
+    justify-content: space-between;
+    width: 620px;
+
+    margin: 0 auto;
   }
 
   .advantages__triangle-bg {
@@ -174,7 +180,6 @@
   }
 
   .advantages__wrapper {
-
     margin-bottom: 57px;
   }
 
@@ -188,7 +193,7 @@
     height: 280px;
 
     margin: 0 auto;
-    margin-bottom: 95px;
+    margin-bottom: 93px;
     padding: 0;
 
     background-color: @color-white;
@@ -197,7 +202,7 @@
   .advantages__add-clock {
     width: 240px;
 
-    background-image: url("../img/icon-timer.svg");
+    background-image: url("../img/timer.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 240px auto;
@@ -207,25 +212,25 @@
     display: block;
     position: absolute;
     content: "";
-    width: 205px;
-    height: 205px;
+    width: 203px;
+    height: 203px;
 
-    top: 54px;
-    left: 17px;
+    top: 55px;
+    left: 18px;
 
-    border: 17px solid @color-red;
+    border: 14px solid @color-red;
     border-radius: 50%;
   }
 
   .advantages__add-time {
     position: absolute;
-    top: 78px;
+    top: 77px;
     left: 64px;
 
     color: @color-red;
     font-size: 96px;
     font-weight: 700;
-    line-height: 149px;
+    line-height: 148px;
   }
 
   .advantages__add-picture {
@@ -234,7 +239,7 @@
   }
 
   .advantages__tablet-picture {
-    height: 480px;
+    height: 486px;
     display: block;
   }
 
@@ -249,11 +254,15 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
+    margin-top: 0;
     margin-bottom: 70px;
   }
 
-  .advantages__wrapper {
+  .advantages__list-container {
+    margin-bottom: 76px;
+  }
 
+  .advantages__wrapper {
     margin: 0;
   }
 
@@ -304,7 +313,7 @@
 
     margin: 0 auto;
     margin-bottom: 70px;
-    padding: 0 10px;
+    padding: 0;
   }
 
   .advantages__add-picture {
@@ -354,7 +363,7 @@
   }
 
   .advantages__wrapper::after {
-    top: -37px;
+    top: -22px;
 
     height: 15vw;
 
