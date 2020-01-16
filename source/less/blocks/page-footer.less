@@ -145,21 +145,21 @@
     width: 940px;
 
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0;
     padding-bottom: 50px;
   }
 
   .page-footer__nav-wrapper {
     min-height: 808px;
 
-    margin-bottom: 62px;
+    margin-bottom: 63px;
   }
 
   .page-footer__main-wrapper {
     width: 940px;
-    height: 120px;
 
     padding: 0;
+    padding-bottom: 75px;
   }
 
   .page-footer__logo-tablet {
@@ -171,6 +171,19 @@
   }
 
   .page-footer__map {
-    height: 514px;
+    height: 480px;
+
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-position: center -300px;
+
+    @media (min-resolution: @retina-dppx),
+    (min-resolution: @retina-dpi) {
+    background-image: url("../img/bg-map-desktop@2x.jpg");
+    }
+
+    &::after {
+      top: 244px;
+      left: 465px;
+    }
   }
 }

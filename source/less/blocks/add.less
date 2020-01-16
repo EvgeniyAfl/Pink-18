@@ -51,7 +51,11 @@
   }
 
   .add__info br {
-    display: block;
+    display: none;
+
+    &:last-child {
+      display: block;
+    }
   }
 
   .add__link {
@@ -70,14 +74,13 @@
 
     margin: 0;
     padding: 0;
-    padding-left: 18px;
   }
 
   .add__info {
     font-size: 18px;
     line-height: 30px;
 
-    margin-bottom: 30px;
+    margin-bottom: 31px;
     padding-right: 30px;
   }
 
@@ -87,7 +90,7 @@
   }
 
   .add__description {
-    margin-top: 95px;
+    margin-top: 93px;
     margin-bottom: 20px;
   }
 

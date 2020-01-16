@@ -190,7 +190,6 @@
     flex-direction: row;
 
     width: 620px;
-    height: 280px;
 
     margin: 0 auto;
     margin-bottom: 93px;
@@ -201,6 +200,7 @@
 
   .advantages__add-clock {
     width: 240px;
+    height: 280px;
 
     background-image: url("../img/timer.svg");
     background-position: 0 0;
@@ -264,6 +264,7 @@
 
   .advantages__wrapper {
     margin: 0;
+    padding-bottom: 64px;
   }
 
   .advantages__description {
@@ -280,11 +281,9 @@
 
   .advantages__add-wrapper {
     width: 940px;
-    height: 350px;
 
     margin: 0 auto;
-    margin-bottom: 75px;
-    padding: 0 10px;
+    padding: 0;
 
     background-color: inherit;
   }
@@ -312,7 +311,6 @@
     width: 960px;
 
     margin: 0 auto;
-    margin-bottom: 70px;
     padding: 0;
   }
 
@@ -337,7 +335,7 @@
 
   .advantages__add-time {
     top: 98px;
-    left: 88px;
+    left: 82px;
 
     color: @color-red;
     font-size: 120px;
@@ -346,18 +344,19 @@
   }
 
   .advantages__add-clock::after {
-    width: 250px;
-    height: 250px;
+    width: 253px;
+    height: 253px;
 
-    top: 73px;
-    left: 32px;
+    top: 71px;
+    left: 24px;
 
-    border: 15px solid @color-red;
+    border: 17px solid @color-red;
     border-radius: 50%;
   }
 
   .advantages__add-clock {
     width: 300px;
+    height: 350px;
 
     background-size: 300px auto;
   }
@@ -371,9 +370,9 @@
   }
 
   .advantages__container {
-    height: 445px;
+    display: block;
 
-    padding-top: 31px;
+    padding-bottom: 63px;
 
     background-color: @color-gray;
   }

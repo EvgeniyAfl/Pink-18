@@ -230,9 +230,23 @@
     line-height: 30px;
   }
 
+  .table__row-head .table__title {
+    padding: 19px 30px;
+    padding-top: 16px;
+  }
+
   .table__title svg {
     width: 27px;
     height: 27px;
+  }
+
+  .table__title--hit {
+    background-position: 0 0;
+
+    &::after {
+      top: 12px;
+      left: 14px;
+    }
   }
 
   .table__title--bg-blue {
@@ -240,15 +254,30 @@
     padding-bottom: 15px;
   }
 
+  .table__title--bg-blue .table__description {
+    margin-bottom: 2px;
+    padding: 0;
+
+    font-size: 18px;
+  }
+
   .table__price {
     display: block;
-
-    padding-bottom: 5px;
 
     font-size: 24px;
   }
 
   .table__object {
+    padding-top: 12px;
+    padding-right: 8px;
+    padding-bottom: 17px;
+    padding-left: 21px;
+
     font-size: 18px;
+  }
+
+  .table__option {
+    top: 2px;
+    right: -3px;
   }
 }
