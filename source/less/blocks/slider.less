@@ -32,17 +32,17 @@
     width: 7px;
     height: 7px;
 
-    background-color: @color-gray-dark;
+    background-color: rgba(40, 54, 69, 0.3);
     border-radius: 50%;
     cursor: pointer;
   }
 
   &:hover::after {
-    background-color: @color-slider-hover;
+    background-color: rgba(40, 54, 69, 0.6);
   }
 
   &:active::after {
-    background-color: @color-slider-down;
+    background-color: rgba(40, 54, 69, 0.1);
   }
 }
 
@@ -305,15 +305,14 @@
   }
 
   .slider__btn svg {
-    fill: @color-blue;
-    opacity: 0.3;
+    fill: rgba(40, 54, 69, 0.3);
 
     &:hover {
-      opacity: 0.6;
+      fill: rgba(40, 54, 69, 0.6);
     }
 
     &:active {
-      opacity: 0.1;
+      fill: rgba(40, 54, 69, 0.1);
     }
   }
 
@@ -326,6 +325,7 @@
   }
 
   .slider__toggles-list {
+    display: none;
     margin-bottom: 5px;
   }
 }

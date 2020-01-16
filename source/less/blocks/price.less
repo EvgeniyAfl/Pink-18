@@ -41,16 +41,16 @@
     width: 7px;
     height: 7px;
 
-    background-color: @color-gray-dark;
+    background-color: rgba(40, 54, 69, 0.3);
     border-radius: 50%;
   }
 
   &:hover::after {
-    background-color: @color-slider-hover;
+    background-color: rgba(40, 54, 69, 0.6);
   }
 
   &:active::after {
-    background-color: @color-slider-down;
+    background-color: rgba(40, 54, 69, 0.1);
   }
 }
 
@@ -107,15 +107,6 @@
     background-size: cover;
   }
 }
-
-// .price__triangle {
-//   display: block;
-//   position: absolute;
-//   width: 100%;
-
-//   top: 0;
-//   left: 0;
-// }
 
 @media (min-width: @tablet-width) {
   .price {
@@ -175,14 +166,14 @@
 
     margin: 0 auto;
     padding: 0;
-    padding-top: 136px;
+    padding-top: 151px;
     padding-bottom: 95px;
   }
 
   .price__table-wrapper::after {
     top: 0;
 
-    height: 8vw;
+    height: 9vw;
 
     background-size: cover;
   }

@@ -57,16 +57,16 @@
   background-repeat: no-repeat;
 
   @media (min-resolution: @retina-dppx),
-  (min-resolution: @retina-dpi) {
+    (min-resolution: @retina-dpi) {
     background-image: url("../img/bg-map-tablet@2x.jpg");
     background-size: 700px auto;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     top: 134px;
-    left: 146px;
+    left: 48vw;
 
     width: 30px;
     height: 30px;
@@ -135,7 +135,6 @@
 
     &::after {
       top: 195px;
-      left: 315px;
     }
   }
 }
@@ -177,13 +176,12 @@
     background-position: center -300px;
 
     @media (min-resolution: @retina-dppx),
-    (min-resolution: @retina-dpi) {
-    background-image: url("../img/bg-map-desktop@2x.jpg");
+      (min-resolution: @retina-dpi) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
     }
 
     &::after {
       top: 244px;
-      left: 465px;
     }
   }
 }
