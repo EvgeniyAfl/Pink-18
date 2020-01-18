@@ -115,7 +115,7 @@
   display: block;
 
   width: 280px;
-  padding: 16px;
+  padding: 16px 10px;
   margin: 0 auto;
 
   color: @color-white;
@@ -153,14 +153,13 @@
 
 @media (min-width: @tablet-width) {
   .page-body--no-js .main-photo {
-    margin-bottom: 48px;
-    padding-top: 20px;
+    margin-bottom: 50px;
+    padding-top: 18px;
 
-    background-position: center 0, center -111px;
+    background-position: center 74px, center -111px;
 
     @media (min-resolution: @retina-dppx),
       (min-resolution: @retina-dpi) {
-      background-position: center 10px, center -111px;
     }
   }
 
@@ -214,9 +213,7 @@
   }
 
   .main-photo__apps-wrapper {
-    margin-top: 21px;
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
@@ -238,7 +235,8 @@
   }
 
   .main-photo__item:first-child {
-    margin-bottom: 33px;
+    margin-top: 6px;
+    margin-bottom: 36px;
   }
 
   .main-photo__item:last-child {
@@ -255,6 +253,10 @@
     padding-right: 30px;
   }
 
+  .main-photo__microsoft-icon {
+    padding-top: 5px;
+  }
+
   .main-photo__description {
     font-size: 18px;
     line-height: 24px;
@@ -266,6 +268,13 @@
   .page-body--no-js .main-photo {
     margin-bottom: 66px;
     padding-top: 160px;
+
+    background-position: center 0, center -111px;
+
+    @media (min-resolution: @retina-dppx),
+      (min-resolution: @retina-dpi) {
+      background-position: center 11px;
+    }
   }
 
   .main-photo {
@@ -294,6 +303,10 @@
     height: 308px;
 
     margin-top: 10px;
+  }
+
+  .main-photo__microsoft-icon {
+    padding-top: 0;
   }
 
   .main-photo__container {

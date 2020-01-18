@@ -8,7 +8,8 @@
   text-align: center;
   color: @color-white;
 
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   border-radius: 3px;
   background-color: @color-white;
   transform: translateX(-31%);
@@ -45,7 +46,7 @@
 
 .table__title {
   position: relative;
-  border: 2px solid @color-gray;
+  border: 1px solid @color-gray;
   box-sizing: border-box;
 
   padding: 14px;
@@ -104,8 +105,8 @@
 
 .table__option {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 17px;
+  right: 15px;
 
   width: 32px;
   height: 27px;
@@ -115,32 +116,29 @@
 
 .table__option--no {
   right: 11px;
-
-  background-image: url("../img/no.svg");
-  background-repeat: no-repeat;
-}
-
-.table__option--yes {
-  background-image: url("../img/yes.svg");
-  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
   .table {
     width: 620px;
 
+    border-collapse: collapse;
     transform: none;
   }
 
   .table__title {
+    width: 154px;
+
     padding: 0;
     padding-top: 1px;
     padding-right: 19px;
     padding-left: 22px;
+
+    border: 2px solid @color-gray;
   }
 
   .table__row-head .table__title {
-    padding: 5px 28px;
+    padding: 6px 28px;
   }
 
   .table__title--bg-blue {
@@ -169,7 +167,8 @@
     background-position: -2px -7px;
 
     &::after {
-      top: 3px;
+      top: 5px;
+      left: 8px;
     }
   }
 
@@ -217,7 +216,7 @@
   }
 
   .table__title {
-    width: 240px;
+    width: 235px;
 
     font-size: 18px;
     line-height: 30px;
@@ -238,6 +237,16 @@
   .table__title svg {
     width: 27px;
     height: 27px;
+  }
+
+  .table__option {
+    top: 2px;
+    right: -3px;
+
+    &--no {
+      top: -1px;
+      left: 1px;
+    }
   }
 
   .table__title--hit {
@@ -274,10 +283,5 @@
     padding-left: 21px;
 
     font-size: 18px;
-  }
-
-  .table__option {
-    top: 2px;
-    right: -3px;
   }
 }

@@ -46,6 +46,10 @@
   }
 }
 
+.slider__button--active {
+  height: 15px;
+}
+
 .slider__button--active::after {
   background: transparent;
 }
@@ -59,7 +63,7 @@
   content: "";
 
   position: absolute;
-  top: -2px;
+  top: 0;
   left: 0;
 
   width: 12px;
@@ -216,11 +220,6 @@
     color: @color-blue;
     font-size: 14px;
     font-weight: 400;
-  }
-
-  .slider__button--active::before {
-    top: -2px;
-    left: -2px;
   }
 
   .slider__button::after {

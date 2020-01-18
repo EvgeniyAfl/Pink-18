@@ -91,19 +91,25 @@
               <li class="main-photo__item">
                 <a class="main-photo__icon-dowload" href="https://www.apple.com/ru/ios/app-store/">
                   <span class="visually-hidden">Приложение для Эппл</span>
-                  <img src="img/apple.svg" width="46" height="55" alt="иконка Эппл">
+                  <svg width="46px" height="60px">
+                    <use xlink:href="#icon-apple"></use>
+                  </svg>
                 </a>
               </li>
               <li class="main-photo__item">
                 <a class="main-photo__icon-dowload" href="https://play.google.com/store/apps?hl=ru">
                   <span class="visually-hidden">Приложение для Андроид</span>
-                  <img src="img/android.svg" width="46" height="47" alt="иконка Андроид">
+                  <svg width="46px" height="50px">
+                    <use xlink:href="#icon-android"></use>
+                  </svg>
                 </a>
               </li>
               <li class="main-photo__item">
                 <a class="main-photo__icon-dowload" href="https://www.microsoft.com/ru-ru/store/apps/windows-phone">
                   <span class="visually-hidden">Приложение для Майкрософт</span>
-                  <img src="img/microsoft.svg" width="44" height="45" alt="иконка Майкрософт">
+                  <svg class="main-photo__microsoft-icon" width="46px" height="46px">
+                    <use xlink:href="#icon-microsoft"></use>
+                  </svg>
                 </a>
               </li>
               <li class="main-photo__item">
@@ -245,6 +251,7 @@
       <div class="price__table-wrapper">
         <h2 class="visually-hidden">Цена</h2>
         <table class="price__table table">
+          <tbody>
           <tr class="table__row-head">
             <th class="table__title table__title--empty"></th>
             <th class="table__title table__title--bg-blue">
@@ -264,47 +271,66 @@
             <th class="table__object">Розовый фильтр</th>
             <td class="table__title">
               <span class="table__rates-name">Розовый фильтр</span>
-              <span class="table__option table__option--yes">есть</span>
+              <svg class="table__option table__option--yes" width="32" height="27">
+                <use xlink:href="#icon-yes"></use>
+              </svg>
             </td>
             <td class="table__title">
               <span class="table__rates-name">Розовый фильтр</span>
-              <span class="table__option table__option--yes">есть</span>
+              <svg class="table__option table__option--yes" width="32" height="27">
+                <use xlink:href="#icon-yes"></use>
+              </svg>
             </td>
             <td class="table__title">
               <span class="table__rates-name">Розовый фильтр</span>
-              <span class="table__option table__option--yes">есть</span>
+              <svg class="table__option table__option--yes" width="32" height="27">
+                <use xlink:href="#icon-yes"></use>
+              </svg>
             </td>
           </tr>
           <tr class="table__row">
             <th class="table__object">Смайлики</th>
             <td class="table__title">
               <span class="table__rates-name">Смайлики</span>
-              <span class="table__option table__option--no">нет</span>
+              <svg class="table__option table__option--no" width="32" height="27">
+                <use xlink:href="#icon-no"></use>
+              </svg>
             </td>
             <td class="table__title">
               <span class="table__rates-name">Смайлики</span>
-              <span class="table__option table__option--yes">есть</span>
+              <svg class="table__option table__option--yes" width="32" height="27">
+                <use xlink:href="#icon-yes"></use>
+              </svg>
             </td>
             <td class="table__title">
               <span class="table__rates-name">Смайлики</span>
-              <span class="table__option table__option--yes">есть</span>
+              <svg class="table__option table__option--yes" width="32" height="27">
+                <use xlink:href="#icon-yes"></use>
+              </svg>
             </td>
           </tr>
           <tr class="table__row">
             <th class="table__object">Комментарии</th>
             <td class="table__title">
               <span class="table__rates-name">Комментарии</span>
-              <span class="table__option table__option--no">нет</span>
+              <svg class="table__option table__option--no" width="32" height="27">
+                <use xlink:href="#icon-no"></use>
+              </svg>
             </td>
             <td class="table__title">
               <span class="table__rates-name">Комментарии</span>
-              <span class="table__option table__option--no">нет</span>
+              <svg class="table__option table__option--no" width="32" height="27">
+                <use xlink:href="#icon-no"></use>
+              </svg>
             </td>
             <td class="table__title">
               <span class="table__rates-name">Комментарии</span>
-              <span class="table__option table__option--yes">есть</span>
+              <svg class="table__option table__option--yes" width="32" height="27">
+                <use xlink:href="#icon-yes"></use>
+              </svg>
             </td>
           </tr>
+          </tbody>
         </table>
         <ul class="price__toggles">
           <li class="price__toggle-item">
@@ -330,7 +356,7 @@
   <footer class="page-footer">
     <div class="page-footer__nav-wrapper">
       <div class="page-footer__contacts-wrapper contacts">
-        <h2 class="contacts__title">Остались вопросы?Свяжитесь с нами!</h2>
+        <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
             <h3 class="contacts__info">Звоните:</h3>
