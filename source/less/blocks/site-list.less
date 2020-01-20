@@ -32,6 +32,12 @@
   border-bottom: 1px solid @color-black;
 }
 
+@media (max-width: @mobile-tablet-width) {
+  .main-nav--close .site-list {
+    display: none;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .site-list {
     width: 620px;
